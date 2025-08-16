@@ -2,9 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: BlueClub
 chapters:
-- file: opener
-- file: responder
-- file: blueclub
-- file: sandbox
+- file: BlueClubOpen
+- file: BlueClubRespond
+- file: bc_functions
+- file: bc_sandbox

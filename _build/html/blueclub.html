@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Blue Club &#8212; My sample book</title>
+    <title>Blue Club Dahlonega &#8212; My sample book</title>
   
   
   
@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -60,14 +57,14 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'blueclub';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'BlueClub';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Sandbox" href="sandbox.html" />
-    <link rel="prev" title="Opening Bids" href="opener.html" />
+    <link rel="next" title="Opening Bids" href="BlueClubOpen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,8 +80,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -92,6 +100,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -99,8 +108,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -116,8 +125,9 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -135,7 +145,7 @@
     
   
 
-<a class="navbar-brand logo" href="intro.html">
+<a class="navbar-brand logo" href="#">
   
   
   
@@ -147,31 +157,36 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
                     Blue Club Dahlonega
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="opener.html">Opening Bids</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Blue Club</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sandbox.html">Sandbox</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="BlueClubOpen.html">Opening Bids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BlueClubRespond.html">Responding Bids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bc_functions.html">Blue Club Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bc_sandbox.html">Sandbox</a></li>
 </ul>
 
     </div>
@@ -180,14 +195,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -248,7 +258,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fblueclub.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FBlueClub.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -278,7 +288,7 @@
       
       
       
-      <li><a href="_sources/blueclub.ipynb" target="_blank"
+      <li><a href="_sources/BlueClub.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -331,17 +341,27 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </button>
-
 </div></div>
       
     </div>
@@ -352,11 +372,33 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Blue Club</h1>
+    <h1>Blue Club Dahlonega</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fast-accuracy">Fast Accuracy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traditional-bidding">Traditional Bidding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-blue-club">Advantages of Blue Club</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-bidding-systems">Natural Bidding Systems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hand-evaluation">Hand Evaluation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distributional-points">Distributional Points</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strength-of-holdings">Strength of Holdings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intial-code-block">Intial Code Block</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -366,11 +408,112 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="blue-club">
-<h1>Blue Club<a class="headerlink" href="#blue-club" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="blue-club-dahlonega">
+<h1>Blue Club Dahlonega<a class="headerlink" href="#blue-club-dahlonega" title="Link to this heading">#</a></h1>
+<p><em>by robb sinn</em></p>
+<p>Blue Club Dahlonega recalls the strong club system developed and deployed with devastating effect by Italian teams of the 60’s and 70’s. Derivative strong club systems are still in use today.</p>
+<aside class="sidebar">
+<p class="sidebar-title"><strong>Blue Club</strong></p>
+<p>Benito Garozzo lead the development of the Blue Club system which gained popularity when used by the Italian national team in the 1960’s.</p>
+</aside>
+<section id="fast-accuracy">
+<h2>Fast Accuracy<a class="headerlink" href="#fast-accuracy" title="Link to this heading">#</a></h2>
+<p>Blue Club relies upon 2 key strategies to increase the speed and accuracy of the first two rounds of bidding:</p>
+<ol class="arabic simple">
+<li><p>Early bids <strong>limit the power</strong> of our holdings to a small range High Card Points (HCP).</p></li>
+<li><p>Early bids accurately describe <strong>distributional features</strong> of the hand.</p></li>
+</ol>
+<p>Three key bidding tactics help with these goals:</p>
+<ul class="simple">
+<li><p>The <strong>strong 1<span class="math notranslate nohighlight">\(\clubsuit\)</span> opening</strong> signals a great hand with 17 or more points.</p></li>
+<li><p><strong>Canape bidding</strong> alerts partner to a two-suiter with, at worst, a 54xx shape.</p></li>
+<li><p>Opening <strong>4-Card majors</strong> adds a preemptory vibe to Blue Club bidding.</p></li>
+</ul>
+<section id="resources">
+<h3>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h3>
+<p>Blue Club Dahlonega provides a strong club system for beginners and leverages the work of others. The <a class="reference external" href="https://bridgewithdan.com/wp-content/uploads/2019/07/Fiori_Napoletano.txt"><strong>Fiori_Napoletano</strong></a> describes a modern Italian canape system quite similar to the original Blue Team Club. The linked text has great advice for dealing with interference.</p>
+<p>Alex Knox authored <a class="reference external" href="https://acblunit390.org/improve-your-game/blue-club-calgary-casual/"><strong>Blue Club, Calgary Casual Style</strong></a> in 1999 which provides an informative introduction to a strong club system for the beginner-to-intermediate player. Additional help guides and tutorials can be found by searching for <em>Polish Club</em>, <em>Precision Club</em>, <em>Moscito</em>, or <em>Revision Club</em> (an updated version of Precision).</p>
+</section>
+</section>
+<section id="traditional-bidding">
+<h2>Traditional Bidding<a class="headerlink" href="#traditional-bidding" title="Link to this heading">#</a></h2>
+<p>High card point count (HCP) is classically determined in 4321 fashion created by Milton Work and popularized by the lgegendary <a class="reference external" href="https://www.bridgehands.com/Conventions/Goren_System.htm">player and writer Charles Goren</a>. Traditionally, we determine hand strength for bridge using the following point count:</p>
+<ul class="simple">
+<li><p>Aces: 4 points</p></li>
+<li><p>Kings: 3 points</p></li>
+<li><p>Queens: 2 points</p></li>
+<li><p>Jacks: 1 point</p></li>
+</ul>
+<p>Exactly 40 HCP must be distributed amongst four players. Thus, bridge partnerships can count on certain HCP minimums leading to winning outcomes:</p>
+<ul class="simple">
+<li><p><strong>Game</strong> in No Trump: 25 points</p></li>
+<li><p><strong>Game</strong> in a suit contract: 26 points</p></li>
+<li><p><strong>Small slam</strong>: 33 points</p></li>
+<li><p><strong>Grand slam</strong>: 37 points</p></li>
+</ul>
+<p><span style = "color:blue; font-weight:bold">High card points alone do not tell the full story,</span> and many different ways are currently used to count points or to deal with distributional hands. A bridge partnership <strong>requires a 4-4 fit in trumps</strong> to make game at 26 team HCP, and a superfit in trumps such as 6-5 or 7-4 may lead to a team HCP of 22 - 23 being successful.</p>
+<p>The variations seem limitless. However, for this guide, we will use the traditional HCP count altered by distributional points (DP). This method provides both simplicity and accuracy. As the partnership develops and improves, additional complexity may useful or even necessary.</p>
+<section id="advantages-of-blue-club">
+<h3>Advantages of Blue Club<a class="headerlink" href="#advantages-of-blue-club" title="Link to this heading">#</a></h3>
+<p>Strong club systems deliver more information to partner more quickly than Standard American (SAYC) and other modern system. For big hands, the strong club opening delivers news of our 17 or more HCP immediately. Blue Club opening bids allow bidding space to explore features of our holdings and potential trump fit. Canape bidding shows our strongest suit second. Partner knows we must have at least 9 cards in our top two suits, 4 or more in the first suit bid and 5 or more in the second. Every bridge partership is seeking a super-fit of 9 or more trumps as it enhances the distributional qualities of the hands and makes the partnership holdings more powerful. Canape bidding helps the partership identify where super-fit may be possible.</p>
+<p>Current <strong>Standard American</strong> bridge bidding and <strong>2 over 1</strong> systems require opening bids in a major suit to be 13-21 HCP with 5 or more of the suit bid. Alternatively, the constraints are tighter in Blue Club where we open the top of this range with our strong 1<span class="math notranslate nohighlight">\(\clubsuit\)</span>. Opening 4-card majors and using the Rule of 20, a Blue Club player opens many more hands with 1<span class="math notranslate nohighlight">\(\heartsuit\)</span> and 1<span class="math notranslate nohighlight">\(\spadesuit\)</span> than typical players. This adds a preemptive style to the system but also adds accuracy. When our Blue Club partner opens with 1<span class="math notranslate nohighlight">\(\diamondsuit\)</span>, 1<span class="math notranslate nohighlight">\(\heartsuit\)</span> and 1<span class="math notranslate nohighlight">\(\spadesuit\)</span>, she has narrowed the possible range to 12 - 16 HCP which makes follow-on bidding simpler and more effective.</p>
+<p>Blue Club has no natural 1<span class="math notranslate nohighlight">\(\clubsuit\)</span> opening bid which can be <span style = "color:blue;font-weight:bold">quite a disadvantage</span>. The advantage of the strong club opening bid together with opening 4-card majors and using canape-style follow-on bids, Blue Club players have a great deal of flexibility that overcomes many of the disadvantages.</p>
+</section>
+<section id="natural-bidding-systems">
+<h3>Natural Bidding Systems<a class="headerlink" href="#natural-bidding-systems" title="Link to this heading">#</a></h3>
+<p>The problem of accuracy has led to a multiplicity of bridge bidding conventions. Transfer bids, inverted minors, and Drury bids exemplify how unnatural many bids in modern bridge can be. Artificial bids may result in misunderstandings. The more natural our bidding is, the more likely partner will know how to respond. Seeking accuracy for every eventuality results in a problem of memory – to much information to remember easily at the bridge table.</p>
+<p>Of course, many bridge hands are thorny and provide challenges to natural bidding. Hence, we need <strong>some</strong> conventions. In this system we will use the following conventions:</p>
+<ul class="simple">
+<li><p>Stayman</p></li>
+<li><p><a class="reference external" href="https://www.bridgebum.com/splinters.php">Splinters</a></p></li>
+<li><p><a class="reference external" href="https://www.bridgebum.com/kantar_cue_bid.ph">Cue Bids</a></p></li>
+<li><p><a class="reference external" href="https://www.bridgebum.com/roman_key_card_blackwood.php">Roman Key Card Blackwood</a> (1430)</p></li>
+</ul>
+<p>Note that Stayman in Blue Club requires a slightly different treament due to the fact we can open 4-card majors with <span class="math notranslate nohighlight">\(1\heartsuit\)</span> or <span class="math notranslate nohighlight">\(1\spadesuit\)</span>. Alex Knox has a good treament: <a class="reference external" href="https://acblunit390.org/improve-your-game/blue-club-calgary-casual/">Blue Club Calgary, pp. 49-50</a>.</p>
+<p>The rest of the system remains as natural as possible. In this way, the partnership avoids tricking itself into nonsense contracts. Also, this system is the beginning for a partnership wishing to learn a Strong Club system. As the partnership develops an understanding of the bidding and play using Blue Club Dahlonega, additional conventions and agreements can be added.</p>
+</section>
+</section>
+<section id="hand-evaluation">
+<h2>Hand Evaluation<a class="headerlink" href="#hand-evaluation" title="Link to this heading">#</a></h2>
+<p>Most modern bridge players have a way to combine <strong>distributional points</strong> (DP) to the traditional <strong>High Card Points</strong> (HCP) where:</p>
+<div class="math notranslate nohighlight">
+\[\text{Total Points} = \text{HCP} + \text{DP}\]</div>
+<p>While some methods are quite sophisticated, Blue Club Dahlonega chooses simplicity instead. The cost in effectivenss is quite minimal.</p>
+<section id="distributional-points">
+<h3>Distributional Points<a class="headerlink" href="#distributional-points" title="Link to this heading">#</a></h3>
+<p>The DP for Blue Club Dahlonega will remain easy to count and focused on the most important features:</p>
+<ul class="simple">
+<li><p>Add 1 DP for every card in a long suit beyond 4.</p></li>
+<li><p>Add 2 DP for a void suit.</p></li>
+<li><p>Add 1 DP for a singleton.</p></li>
+</ul>
+<p>Do some players use more complicated ways to evaluate the power of a hand? Of course. For example, some add a point for doubltons and increase the points added for singletons and voids. Is this needed? Not if a new partnership wishes to learn Blue Club Dahlonega.</p>
+</section>
+<section id="strength-of-holdings">
+<h3>Strength of Holdings<a class="headerlink" href="#strength-of-holdings" title="Link to this heading">#</a></h3>
+<p>To further evaluate the distributional properties of a hand, Blue Club Dahlonega includes three additional bridge ideas used widely by modern players and other systems:</p>
+<ol class="arabic simple">
+<li><p><strong>Rule of 20.</strong> The Rule of 20 says that, provided our HCP plus the number of cards in our 2 longest suits is at least 20, we can confidently open with 1<span class="math notranslate nohighlight">\(\clubsuit\)</span>, 1<span class="math notranslate nohighlight">\(\heartsuit\)</span> or 1<span class="math notranslate nohighlight">\(\spadesuit\)</span>. The Rule of 20 allows us to open some hands with only 11 HCP. The Rule of 20 helps us understand whether a bridge hand is strong enough be opened by standard level-one bid.</p></li>
+<li><p><strong>Controls.</strong> Control of suit indicates a singleton, a void suit, or a suit holding like Kx. First round control means we have the first winner in the suit, something like a void or a singleton Ace. Second round control indicates we have the second winner in the suit such as Kx or a small singleton. We already count short suits in our DP, and we further consider controls when fit or superfit has been found, generally when <span style = "color:blue;font-weight:bold">searching for a slam</span>.</p></li>
+<li><p><strong>Bad Shape.</strong> The worst hands in bridge have a 4-3-3-3 distribution. A 4-3-3-3 hand plays worse than its HCP would indicate. We will discount by one HCP all hands with a 4-3-3-3 shape.</p></li>
+</ol>
+</section>
+</section>
+<section id="intial-code-block">
+<h2>Intial Code Block<a class="headerlink" href="#intial-code-block" title="Link to this heading">#</a></h2>
+<p>Let’s highlight the packages that we will require:</p>
+<ol class="arabic simple">
+<li><p>endplay (bridge and card evaluation functions)</p></li>
+<li><p>datascience (tables, etc.)</p></li>
+<li><p>numpy</p></li>
+<li><p>scipy.stats (evaluation of information from tables)</p></li>
+</ol>
+<p>You can see the initial code block we will need detailed below. Notice that we load matplotlib and use the style created by the folks at 538.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datascience</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Standard datascience initialization code with endplay added for bridge functionality.</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">datascience</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plots</span>
 <span class="n">plots</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
@@ -381,142 +524,8 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">points_rs</span><span class="p">(</span><span class="n">hnd</span><span class="p">):</span>
-   <span class="n">long</span> <span class="o">=</span> <span class="mi">0</span>
-   <span class="n">short</span> <span class="o">=</span> <span class="n">dist_points</span><span class="p">(</span><span class="n">hnd</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-   <span class="n">L1</span> <span class="o">=</span> <span class="n">dist_points</span><span class="p">(</span><span class="n">hnd</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-   <span class="n">L2</span> <span class="o">=</span> <span class="n">dist_points</span><span class="p">(</span><span class="n">hnd</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-   <span class="n">L3</span> <span class="o">=</span> <span class="n">dist_points</span><span class="p">(</span><span class="n">hnd</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-   <span class="n">L4</span> <span class="o">=</span> <span class="n">dist_points</span><span class="p">(</span><span class="n">hnd</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
-   <span class="n">L5</span> <span class="o">=</span> <span class="n">dist_points</span><span class="p">(</span><span class="n">hnd</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-   <span class="n">L6</span> <span class="o">=</span> <span class="n">dist_points</span><span class="p">(</span><span class="n">hnd</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
-   <span class="n">L7</span> <span class="o">=</span> <span class="n">dist_points</span><span class="p">(</span><span class="n">hnd</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
-   <span class="n">long</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">,</span> <span class="n">L3</span><span class="p">,</span> <span class="n">L4</span><span class="p">,</span> <span class="n">L5</span><span class="p">,</span> <span class="n">L6</span><span class="p">,</span> <span class="n">L7</span><span class="p">)</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]):</span>
-      <span class="n">long</span> <span class="o">=</span> <span class="n">long</span> <span class="o">+</span><span class="mi">1</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]):</span>
-      <span class="n">long</span> <span class="o">=</span> <span class="n">long</span> <span class="o">+</span><span class="mi">1</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]):</span>
-      <span class="n">long</span> <span class="o">=</span> <span class="n">long</span> <span class="o">+</span><span class="mi">2</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]):</span>
-      <span class="n">long</span> <span class="o">=</span> <span class="n">long</span> <span class="o">+</span><span class="mi">1</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]):</span>
-      <span class="n">long</span> <span class="o">=</span> <span class="n">long</span> <span class="o">+</span><span class="mi">2</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]):</span>
-      <span class="n">long</span> <span class="o">=</span> <span class="n">long</span> <span class="o">+</span><span class="mi">1</span>
-   <span class="n">totalPts</span> <span class="o">=</span> <span class="n">short</span> <span class="o">+</span> <span class="n">long</span> <span class="o">+</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span>
-   <span class="k">return</span> <span class="n">totalPts</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rule20</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
-   <span class="n">TF</span> <span class="o">=</span> <span class="kc">False</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">hcp</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="o">+</span> <span class="n">shape</span><span class="p">(</span><span class="n">h</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">shape</span><span class="p">(</span><span class="n">h</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="mi">20</span><span class="p">:</span>
-      <span class="n">TF</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">return</span> <span class="n">TF</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">bid_qual</span><span class="p">(</span><span class="n">soot</span><span class="p">):</span>
-   <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">soot</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-      <span class="nb">eval</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span>
-   <span class="k">else</span><span class="p">:</span>
-      <span class="nb">eval</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">soot</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span> <span class="n">hcp</span><span class="p">(</span><span class="n">soot</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">)</span>
-   <span class="k">return</span> <span class="nb">eval</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">quals</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
-   <span class="n">sq</span> <span class="o">=</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="p">;</span> <span class="n">hq</span> <span class="o">=</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="p">;</span> <span class="n">dq</span> <span class="o">=</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="p">;</span> <span class="n">cq</span> <span class="o">=</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="p">;</span>
-   <span class="n">q</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">(</span><span class="n">sq</span><span class="p">,</span> <span class="n">hq</span><span class="p">,</span> <span class="n">dq</span><span class="p">,</span> <span class="n">cq</span><span class="p">)</span>
-   <span class="k">return</span> <span class="n">q</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">control</span><span class="p">(</span><span class="n">soot</span><span class="p">):</span>
-   <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">soot</span><span class="p">)</span>
-   <span class="n">control</span> <span class="o">=</span> <span class="mi">0</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-      <span class="n">control</span> <span class="o">=</span> <span class="mi">1</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">soot</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-      <span class="n">control</span> <span class="o">=</span> <span class="mi">2</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">soot</span><span class="o">.</span><span class="fm">__contains__</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)):</span>
-      <span class="n">control</span> <span class="o">=</span> <span class="mi">1</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">soot</span><span class="o">.</span><span class="fm">__contains__</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)):</span>
-      <span class="n">control</span> <span class="o">=</span> <span class="mi">1</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">soot</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">soot</span><span class="o">.</span><span class="fm">__contains__</span><span class="p">(</span><span class="s1">&#39;K&#39;</span><span class="p">)):</span>
-      <span class="n">control</span> <span class="o">=</span> <span class="mi">2</span>
-   <span class="k">return</span> <span class="n">control</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">controls</span><span class="p">(</span><span class="n">hnd</span><span class="p">):</span>
-   <span class="n">c</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">(</span> <span class="n">control</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="p">,</span> <span class="n">control</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="p">,</span> <span class="n">control</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="p">,</span> <span class="n">control</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="p">)</span>
-   <span class="k">return</span> <span class="n">c</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">make_bid_table</span><span class="p">(</span><span class="n">hnd</span><span class="p">):</span>
-   <span class="n">control_array</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">(</span> <span class="n">controls</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="p">,</span> <span class="n">controls</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="p">,</span> <span class="n">controls</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="p">,</span> <span class="n">controls</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">))</span>
-   <span class="n">array_hcp</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">(</span><span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">),</span><span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">),</span><span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">),</span><span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">))</span>
-   <span class="n">array_length</span> <span class="o">=</span> <span class="n">exact_shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span>
-   <span class="n">array_titles</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">(</span><span class="s1">&#39;Spades&#39;</span><span class="p">,</span><span class="s1">&#39;Hearts&#39;</span><span class="p">,</span><span class="s1">&#39;Diamonds&#39;</span><span class="p">,</span><span class="s1">&#39;Clubs&#39;</span><span class="p">)</span>
-   <span class="n">q</span> <span class="o">=</span> <span class="n">quals</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span>
-   <span class="n">bid_tab</span> <span class="o">=</span> <span class="n">Table</span><span class="p">()</span><span class="o">.</span><span class="n">with_columns</span><span class="p">(</span><span class="s1">&#39;Suit&#39;</span><span class="p">,</span> <span class="n">array_titles</span><span class="p">,</span> <span class="s1">&#39;Length&#39;</span><span class="p">,</span> <span class="n">array_length</span><span class="p">,</span> <span class="s1">&#39;HCP&#39;</span><span class="p">,</span> <span class="n">array_hcp</span><span class="p">,</span> <span class="s1">&#39;Controls&#39;</span><span class="p">,</span> <span class="n">control_array</span><span class="p">,</span> <span class="s1">&#39;Bid Quality&#39;</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
-   <span class="k">return</span> <span class="n">bid_tab</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">notrump</span><span class="p">(</span><span class="n">hnd</span><span class="p">):</span>
-   <span class="n">NT</span> <span class="o">=</span> <span class="kc">False</span> <span class="p">;</span> <span class="n">pts</span> <span class="o">=</span> <span class="kc">False</span> <span class="p">;</span> <span class="n">dist</span> <span class="o">=</span> <span class="kc">False</span> <span class="p">;</span>
-   <span class="k">if</span> <span class="p">(</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">15</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">23</span> <span class="p">):</span>
-      <span class="n">pts</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">if</span> <span class="p">(</span> <span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="p">):</span>
-      <span class="n">dist</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">elif</span> <span class="p">(</span> <span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="ow">and</span> <span class="nb">min</span><span class="p">(</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="p">,</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="p">,</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="p">,</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="p">):</span>
-      <span class="n">dist</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">elif</span> <span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="ow">and</span> <span class="nb">min</span><span class="p">(</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="p">,</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="p">,</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="p">,</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="p">):</span>
-      <span class="n">dist</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">dist</span> <span class="ow">and</span> <span class="n">pts</span> <span class="p">):</span>
-      <span class="n">NT</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">return</span> <span class="n">NT</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">strong_club</span><span class="p">(</span><span class="n">hnd</span><span class="p">):</span>
-   <span class="n">sc</span> <span class="o">=</span> <span class="kc">False</span>
-   <span class="k">if</span> <span class="p">(</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">17</span> <span class="ow">and</span> <span class="n">rule24</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="p">):</span>
-      <span class="n">sc</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">return</span> <span class="n">sc</span>
-</pre></div>
-</div>
-</div>
+</section>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
@@ -550,21 +559,12 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="opener.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Opening Bids</p>
-      </div>
-    </a>
     <a class="right-next"
-       href="sandbox.html"
+       href="BlueClubOpen.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Sandbox</p>
+        <p class="prev-next-title">Opening Bids</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -574,6 +574,35 @@
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fast-accuracy">Fast Accuracy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traditional-bidding">Traditional Bidding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-blue-club">Advantages of Blue Club</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-bidding-systems">Natural Bidding Systems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hand-evaluation">Hand Evaluation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distributional-points">Distributional Points</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strength-of-holdings">Strength of Holdings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intial-code-block">Intial Code Block</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
@@ -618,8 +647,8 @@ By The Jupyter Book Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
