@@ -6,5 +6,8 @@ root: BlueClub
 chapters:
 - file: BlueClubOpen
 - file: BlueClubRespond
+- file: Bidding
+- file: DuplicateScoring
 - file: bc_functions
 - file: bc_sandbox
+- file: bc_bids
