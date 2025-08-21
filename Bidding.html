@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sandbox &#8212; My sample book</title>
+    <title>Bidding the Hands in Blue Club Dahlonega &#8212; My sample book</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'bc_sandbox';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Bidding';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Blue Club Bidding Functions" href="bc_bids.html" />
-    <link rel="prev" title="Blue Club Functions" href="bc_functions.html" />
+    <link rel="next" title="Scoring Well at Duplicate" href="DuplicateScoring.html" />
+    <link rel="prev" title="Responding Bids" href="BlueClubRespond.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,10 +182,10 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="BlueClubOpen.html">Opening Bids</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BlueClubRespond.html">Responding Bids</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Bidding.html">Bidding the Hands in Blue Club Dahlonega</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bidding the Hands in Blue Club Dahlonega</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DuplicateScoring.html">Scoring Well at Duplicate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bc_functions.html">Blue Club Functions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bc_sandbox.html">Sandbox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bc_bids.html">Blue Club Bidding Functions</a></li>
 </ul>
 
@@ -258,7 +258,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbc_sandbox.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FBidding.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +288,7 @@
       
       
       
-      <li><a href="_sources/bc_sandbox.ipynb" target="_blank"
+      <li><a href="_sources/Bidding.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -370,7 +370,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Sandbox</h1>
+    <h1>Bidding the Hands in Blue Club Dahlonega</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -384,11 +384,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="sandbox">
-<h1>Sandbox<a class="headerlink" href="#sandbox" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="bidding-the-hands-in-blue-club-dahlonega">
+<h1>Bidding the Hands in Blue Club Dahlonega<a class="headerlink" href="#bidding-the-hands-in-blue-club-dahlonega" title="Link to this heading">#</a></h1>
+<p>What follows is the fun work of looking a random bridge deals to see how our bidding holds up.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Standard Datascience initialization code plus Pandas.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Standard Datascience initialization code plus Endplay.</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">datascience</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plots</span>
@@ -400,268 +401,189 @@ document.write(`
 <span class="kn">import</span><span class="w"> </span><span class="nn">import_ipynb</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">endplay.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">Deal</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bc_functions</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">bc_bids</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span> <span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d1</span> <span class="o">=</span> <span class="n">Deal</span><span class="p">(</span><span class="s2">&quot;AKQJ92.KT.T943.A 843.QJ8632..KQ65 76.9.AKJ65.T9843 T5.A754.Q872.J72&quot;</span><span class="p">)</span>
+<span class="n">hand</span> <span class="o">=</span> <span class="n">d1</span><span class="o">.</span><span class="n">north</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Points = &#39;</span> <span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span> <span class="p">,</span> <span class="s1">&#39; and hand is 2-suiter &#39;</span> <span class="p">,</span> <span class="n">twosuiter</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span> <span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">d1</span><span class="o">.</span><span class="n">north</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> The North hand has total points = 15
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Points =  20  and hand is 2-suiter  {&#39;ts&#39;: True, &#39;p&#39;: &#39;Spades&#39;, &#39;s&#39;: &#39;Diamonds&#39;} 
 
- The North hand is a 2-suiter :  {&#39;ts&#39;: True, &#39;p&#39;: &#39;Spades&#39;, &#39;s&#39;: &#39;Hearts&#39;}
-              A7642
-              KQT8
-              KT53
+♠ AKQJ92
+♥ KT
+♦ T943
+♣ A
+</pre></div>
+</div>
+</div>
+</div>
+<table style="width:80%">
+  <colgroup>
+  <col span="1" style="width: 10%;">
+  <col span="1" style="width: 10%;">
+  <col span="1" style="width: 65%;">
+    </colgroup>
+  <tr>
+    <th>Hand</th>
+    <th>Bidding</th> 
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><span style = 'color:blue; font-weight:bold'>North</span></br>AKQJ92</br>KT</br>T943</br>A</td>
+    <td style="text-align: center; vertical-align: middle;">1C - &nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>North picks up a distributional hand with 20 points. On this 2-suiter, a canape sequence will allow North to show the 6 Spades on the third round. Thus, a 1C opening bid fits the bill. The plan is show Diamonds first, then Spades.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><span style = 'color:blue; font-weight:bold'>South</span></br>76</br>9</br>AKJ65</br>T9843</td>
+    <td style="text-align: center; vertical-align: middle;">1C - 1D</td>
+    <td>South finds 11 points but only 8 HCP. Knowing distributional points are worth extra if a fit is found but worthless without fit, South bids carefully with 1D. The response of 2C with a canape bid into Diamonds is too aggressive given how weak the team holdings may be at this point.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><span style = 'color:blue; font-weight:bold'>North</span></br>AKQJ92</br>KT</br>T943</br>A</td>
+    <td style="text-align: center; vertical-align: middle;">1C - 1D</br>2D - &nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>North knows South has 3+ Diamonds and likely 4 or more. North bids 2C to show fit with a jump canape planned to show 6+ spades. The 1D response to 1C from South could have only 3 Diamonds such as 5332 distribution that can't be opened with a standard 1C. North will be thrilled if this is the typical level-one response of 7-11 HCP with 4+ trumps.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><span style = 'color:blue; font-weight:bold'>South</span></br>76</br>9</br>AKJ65</br>T9843</td>
+    <td style="text-align: center; vertical-align: middle;">1C - 1D</br>2D - 3D</td>
+    <td>South confirms at least 4 Diamonds by rebidding the suit. From his point of view the 3NT game is still possible if North controls the majors.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><span style = 'color:blue; font-weight:bold'>North</span></br>AKQJ92</br>KT</br>T943</br>A</td>
+    <td style="text-align: center; vertical-align: middle;">1C - 1D</br>2D - 3D</br>4S - &nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>North knows that the contract will be 3NT, 4S or 5D. The team may be thain at 3NT as either Hearts and Clubs could be an issue. A bid of 4S may be risky if South has a singleton Spade or worse, but North expects a rasie to 5D if that's the case.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><span style = 'color:blue; font-weight:bold'>South</span></br>76</br>9</br>AKJ65</br>T9843</td>
+    <td style="text-align: center; vertical-align: middle;">1C - 1D</br>2D - 3D</br>4S - Pass</td>
+    <td>The canape guarantees 5 or more Spades from North, but the jump is curious. The jump either expresses a higher point count than expected or a 6+ card trump suit. South cannot see North's Diamond suit, so he trusts his partner to know what he's doing.</td>
+  </tr>
+</table><p>As shown below, all three game contracts can be made. Of them, 4S is the most profitable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d1</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">calc_dd_table</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              AKQJ92
+              KT
+              T943
+              A
+T5                          843
+A754                        QJ8632
+Q872                        ---
+J72                         KQ65
+              76
+              9
+              AKJ65
+              T9843
+
+
+     ♣  ♦  ♥  ♠ NT
+  N  8 11  4 10  9
+  S  8 11  4 10  9
+  E  5  2  9  2  2
+  W  5  2  9  2  2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">generate_deal</span><span class="p">(</span><span class="s1">&#39;hcp(north) &gt;= 15 &amp;&amp; shape(north, any 4xxx + 65xx + any 75xx + any 7xxx + any 8xxx) &amp;&amp; hcp(south) &gt;=7&#39;</span><span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">north</span>
+<span class="n">N</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
+<span class="n">hand</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">north</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Points = &#39;</span> <span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="p">,</span> <span class="s1">&#39; and hand is 2-suiter &#39;</span> <span class="p">,</span> <span class="n">twosuiter</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">calc_dd_table</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>♠ AQT3
+♥ AKQT54
+♦ 
+♣ Q76
+Points =  21  and hand is 2-suiter  {&#39;ts&#39;: True, &#39;p&#39;: &#39;Hearts&#39;, &#39;s&#39;: &#39;Spades&#39;} 
+
+              AQT3
+              AKQT54
               ---
-QJ                          T9
-932                         A5
-A7                          Q8642
-AJT863                      9742
-              K853
-              J764
-              J9
-              KQ5
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d2</span> <span class="o">=</span> <span class="n">generate_deal</span><span class="p">(</span><span class="s1">&#39;hcp(north) &gt;= 5 &amp;&amp; shape(north, any 4xxx + 65xx + any 75xx + any 7xxx + any 8xxx)&#39;</span><span class="p">)</span>
-<span class="n">hand</span> <span class="o">=</span> <span class="n">d2</span><span class="o">.</span><span class="n">north</span>
-<span class="n">d2</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
-<span class="c1"># print(&#39;\n The North hand has total points =&#39; , points_rs(hand))</span>
-<span class="c1"># print(&#39; The North hand is a 2-suiter: &#39;, twosuiter(hand))</span>
-<span class="c1"># temp = make_bid_table(hand)</span>
-<span class="c1"># temp.sort(4, True)</span>
-<span class="n">hand</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
-<span class="n">twosuiter</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              Q65
-              A872
-              KQ852
+              Q76
+9765                        K842
+632                         9
+JT72                        Q8653
+KJ                          943
               J
-T942                        KJ87
-4                           T95
-A9                          643
-AK9643                      QT5
-              A3
-              KQJ63
-              JT7
-              872
-♠ Q65
-♥ A872
-♦ KQ852
-♣ J
+              J87
+              AK94
+              AT852
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ts&#39;: True, &#39;p&#39;: &#39;Diamonds&#39;, &#39;s&#39;: &#39;Hearts&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+
+     ♣  ♦  ♥  ♠ NT
+  N 11  8 13  9 12
+  S 11  8 13  9 12
+  E  1  5  0  3  1
+  W  1  5  0  3  1
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h5</span> <span class="o">=</span> <span class="n">Hand</span><span class="p">(</span><span class="s1">&#39;J.KQ986.K42.9732&#39;</span><span class="p">)</span>
-<span class="n">h1</span> <span class="o">=</span> <span class="n">Hand</span><span class="p">(</span><span class="s1">&#39;K8.QJ84.AQT52.52&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Points = &#39;</span><span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">h1</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">    Rule of 20?&#39;</span><span class="p">,</span> <span class="n">rule20</span><span class="p">(</span><span class="n">h1</span><span class="p">))</span>
-<span class="n">h1</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
-<span class="n">make_bid_table</span><span class="p">(</span><span class="n">h1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d2</span> <span class="o">=</span> <span class="n">Deal</span><span class="p">(</span><span class="s2">&quot;KQJT8.A.AKQ.JT83 6.K85.T863.AK976 A43.QJT742.972.Q 9752.963.J54.542&quot;</span><span class="p">)</span>
+<span class="n">hand</span> <span class="o">=</span> <span class="n">d2</span><span class="o">.</span><span class="n">north</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Points = &#39;</span> <span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span> <span class="p">,</span> <span class="s1">&#39; and hand is 2-suiter &#39;</span> <span class="p">,</span> <span class="n">twosuiter</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span> <span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">d2</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">calc_dd_table</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Points =  13 
-    Rule of 20? True
-♠ K8
-♥ QJ84
-♦ AQT52
-♣ 52
-</pre></div>
-</div>
-<div class="output text_html"><table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>Suit</th> <th>Length</th> <th>HCP</th> <th>Controls</th> <th>Bid Quality</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Spades  </td> <td>2     </td> <td>3   </td> <td>2       </td> <td>2.3        </td>
-        </tr>
-        <tr>
-            <td>Hearts  </td> <td>4     </td> <td>3   </td> <td>0       </td> <td>4.3        </td>
-        </tr>
-        <tr>
-            <td>Diamonds</td> <td>5     </td> <td>6   </td> <td>0       </td> <td>5.6        </td>
-        </tr>
-        <tr>
-            <td>Clubs   </td> <td>2     </td> <td>0   </td> <td>0       </td> <td>2          </td>
-        </tr>
-    </tbody>
-</table></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h2</span> <span class="o">=</span> <span class="n">Hand</span><span class="p">(</span><span class="s1">&#39;KT87.AQ987.KJ95.&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Points = &#39;</span><span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">h2</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">    Rule of 20?&#39;</span><span class="p">,</span> <span class="n">rule20</span><span class="p">(</span><span class="n">h2</span><span class="p">))</span>
-<span class="n">h2</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
-<span class="n">make_bid_table</span><span class="p">(</span><span class="n">h2</span><span class="p">)</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Points =  22  and hand is 2-suiter  {&#39;ts&#39;: True, &#39;p&#39;: &#39;Spades&#39;, &#39;s&#39;: &#39;Clubs&#39;} 
+
+              KQJT8
+              A
+              AKQ
+              JT83
+9752                        6
+963                         K85
+J54                         T863
+542                         AK976
+              A43
+              QJT742
+              972
+              Q
+
+ 
+
+     ♣  ♦  ♥  ♠ NT
+  N  8 11  4 10  9
+  S  8 11  4 10  9
+  E  5  2  9  2  2
+  W  5  2  9  2  2
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Points =  16 
-    Rule of 20? True
-♠ KT87
-♥ AQ987
-♦ KJ95
-♣ 
-</pre></div>
-</div>
-<div class="output text_html"><table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>Suit</th> <th>Length</th> <th>HCP</th> <th>Controls</th> <th>Bid Quality</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Spades  </td> <td>4     </td> <td>3   </td> <td>0       </td> <td>4.3        </td>
-        </tr>
-        <tr>
-            <td>Hearts  </td> <td>5     </td> <td>6   </td> <td>0       </td> <td>5.6        </td>
-        </tr>
-        <tr>
-            <td>Diamonds</td> <td>4     </td> <td>4   </td> <td>0       </td> <td>4.4        </td>
-        </tr>
-        <tr>
-            <td>Clubs   </td> <td>0     </td> <td>0   </td> <td>1       </td> <td>0          </td>
-        </tr>
-    </tbody>
-</table></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h3</span> <span class="o">=</span> <span class="n">Hand</span><span class="p">(</span><span class="s1">&#39;J74.AQ93.KQ72.42&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Points = &#39;</span><span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">h3</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">    Rule of 20?&#39;</span><span class="p">,</span> <span class="n">rule20</span><span class="p">(</span><span class="n">h3</span><span class="p">))</span>
-<span class="n">h3</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
-<span class="n">make_bid_table</span><span class="p">(</span><span class="n">h3</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Points =  12 
-    Rule of 20? True
-♠ J74
-♥ AQ93
-♦ KQ72
-♣ 42
-</pre></div>
-</div>
-<div class="output text_html"><table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>Suit</th> <th>Length</th> <th>HCP</th> <th>Controls</th> <th>Bid Quality</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Spades  </td> <td>3     </td> <td>1   </td> <td>0       </td> <td>3.1        </td>
-        </tr>
-        <tr>
-            <td>Hearts  </td> <td>4     </td> <td>6   </td> <td>0       </td> <td>4.6        </td>
-        </tr>
-        <tr>
-            <td>Diamonds</td> <td>4     </td> <td>5   </td> <td>0       </td> <td>4.5        </td>
-        </tr>
-        <tr>
-            <td>Clubs   </td> <td>2     </td> <td>0   </td> <td>0       </td> <td>2          </td>
-        </tr>
-    </tbody>
-</table></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h4</span> <span class="o">=</span> <span class="n">Hand</span><span class="p">(</span><span class="s1">&#39;3.Q8.AT97653.AK2&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Points = &#39;</span><span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">h4</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">    Rule of 20?&#39;</span><span class="p">,</span> <span class="n">rule20</span><span class="p">(</span><span class="n">h4</span><span class="p">))</span>
-<span class="n">h4</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
-<span class="n">make_bid_table</span><span class="p">(</span><span class="n">h4</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Points =  17 
-    Rule of 20? True
-♠ 3
-♥ Q8
-♦ AT97653
-♣ AK2
-</pre></div>
-</div>
-<div class="output text_html"><table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>Suit</th> <th>Length</th> <th>HCP</th> <th>Controls</th> <th>Bid Quality</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Spades  </td> <td>1     </td> <td>0   </td> <td>2       </td> <td>1          </td>
-        </tr>
-        <tr>
-            <td>Hearts  </td> <td>2     </td> <td>2   </td> <td>0       </td> <td>2.2        </td>
-        </tr>
-        <tr>
-            <td>Diamonds</td> <td>7     </td> <td>4   </td> <td>0       </td> <td>7.4        </td>
-        </tr>
-        <tr>
-            <td>Clubs   </td> <td>3     </td> <td>7   </td> <td>0       </td> <td>3.7        </td>
-        </tr>
-    </tbody>
-</table></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h5</span> <span class="o">=</span> <span class="n">Hand</span><span class="p">(</span><span class="s1">&#39;J.KQ986.K42.9732&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Points = &#39;</span><span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">h5</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">    Rule of 20?&#39;</span><span class="p">,</span> <span class="n">rule20</span><span class="p">(</span><span class="n">h5</span><span class="p">))</span>
-<span class="n">h5</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
-<span class="n">make_bid_table</span><span class="p">(</span><span class="n">h5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Points =  11 
-    Rule of 20? False
-♠ J
-♥ KQ986
-♦ K42
-♣ 9732
-</pre></div>
-</div>
-<div class="output text_html"><table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>Suit</th> <th>Length</th> <th>HCP</th> <th>Controls</th> <th>Bid Quality</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Spades  </td> <td>1     </td> <td>1   </td> <td>0       </td> <td>1.1        </td>
-        </tr>
-        <tr>
-            <td>Hearts  </td> <td>5     </td> <td>5   </td> <td>0       </td> <td>5.5        </td>
-        </tr>
-        <tr>
-            <td>Diamonds</td> <td>3     </td> <td>3   </td> <td>0       </td> <td>3.3        </td>
-        </tr>
-        <tr>
-            <td>Clubs   </td> <td>4     </td> <td>0   </td> <td>0       </td> <td>4          </td>
-        </tr>
-    </tbody>
-</table></div></div>
 </div>
 </section>
 
@@ -696,20 +618,20 @@ AK9643                      QT5
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="bc_functions.html"
+       href="BlueClubRespond.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Blue Club Functions</p>
+        <p class="prev-next-title">Responding Bids</p>
       </div>
     </a>
     <a class="right-next"
-       href="bc_bids.html"
+       href="DuplicateScoring.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Blue Club Bidding Functions</p>
+        <p class="prev-next-title">Scoring Well at Duplicate</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

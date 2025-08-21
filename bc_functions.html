@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,7 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'bc_functions';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Opening Bids" href="BlueClubOpen.html" />
+    <link rel="next" title="Sandbox" href="bc_sandbox.html" />
+    <link rel="prev" title="Scoring Well at Duplicate" href="DuplicateScoring.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,7 +181,12 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="BlueClubOpen.html">Opening Bids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BlueClubRespond.html">Responding Bids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bidding.html">Bidding the Hands in Blue Club Dahlonega</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DuplicateScoring.html">Scoring Well at Duplicate</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Blue Club Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bc_sandbox.html">Sandbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bc_bids.html">Blue Club Bidding Functions</a></li>
 </ul>
 
     </div>
@@ -470,7 +476,7 @@ document.write(`
       <span class="n">control</span> <span class="o">=</span> <span class="mi">1</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">soot</span><span class="o">.</span><span class="fm">__contains__</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)):</span>
       <span class="n">control</span> <span class="o">=</span> <span class="mi">1</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">soot</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">soot</span><span class="o">.</span><span class="fm">__contains__</span><span class="p">(</span><span class="s1">&#39;K&#39;</span><span class="p">)):</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="p">(</span> <span class="n">soot</span><span class="o">.</span><span class="fm">__contains__</span><span class="p">(</span><span class="s1">&#39;K&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">soot</span><span class="o">.</span><span class="fm">__contains__</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span> <span class="p">)</span> <span class="p">):</span>
       <span class="n">control</span> <span class="o">=</span> <span class="mi">2</span>
    <span class="k">return</span> <span class="n">control</span>
 </pre></div>
@@ -553,86 +559,18 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">twosuiter</span><span class="p">(</span><span class="n">hnd</span><span class="p">):</span>
-   <span class="n">ts</span> <span class="o">=</span> <span class="kc">False</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span>
+   <span class="n">ts</span> <span class="o">=</span> <span class="kc">False</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">);</span> <span class="n">temp</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="p">;</span>
    <span class="k">if</span> <span class="p">(</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="p">):</span>
       <span class="n">ts</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">return</span> <span class="n">ts</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d2</span> <span class="o">=</span> <span class="n">generate_deal</span><span class="p">(</span><span class="s1">&#39;hcp(north) &gt;= 15 &amp;&amp; shape(north, any 4xxx) # + 65xx + any 75xx + any 7xxx + any 8xxx)&#39;</span><span class="p">)</span>
-<span class="n">hand</span> <span class="o">=</span> <span class="n">d2</span><span class="o">.</span><span class="n">north</span>
-<span class="n">hand</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total points =&#39;</span> <span class="p">,</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hand</span><span class="p">),</span> <span class="s1">&#39; or RS points = &#39;</span><span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;   The hand is a Standard Opener: &#39;</span><span class="p">,</span> <span class="n">standard</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;   The hand is a 2-suiter: &#39;</span><span class="p">,</span> <span class="n">twosuiter</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;       The distributional points: &#39;</span><span class="p">,</span> <span class="n">dist_points</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;       The RS distributional points: &#39;</span><span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span> <span class="o">-</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;           The hand is a NoTrump opener: &#39;</span><span class="p">,</span> <span class="n">notrump</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
-<span class="n">make_bid_table</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>♠ KT2
-♥ AQ85
-♦ K5
-♣ AQJ7
-Total points = 19  or RS points =  19
-   The hand is a Standard Opener:  False
-   The hand is a 2-suiter:  False
-       The distributional points:  1
-       The RS distributional points:  0
-           The hand is a NoTrump opener:  True
-</pre></div>
-</div>
-<div class="output text_html"><table border="1" class="dataframe">
-    <thead>
-        <tr>
-            <th>Suit</th> <th>Length</th> <th>HCP</th> <th>Controls</th> <th>Bid Quality</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Spades  </td> <td>3     </td> <td>3   </td> <td>0       </td> <td>3.3        </td>
-        </tr>
-        <tr>
-            <td>Hearts  </td> <td>4     </td> <td>6   </td> <td>0       </td> <td>4.6        </td>
-        </tr>
-        <tr>
-            <td>Diamonds</td> <td>2     </td> <td>3   </td> <td>2       </td> <td>2.3        </td>
-        </tr>
-        <tr>
-            <td>Clubs   </td> <td>4     </td> <td>7   </td> <td>0       </td> <td>4.7        </td>
-        </tr>
-    </tbody>
-</table></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h2</span> <span class="o">=</span> <span class="n">Hand</span><span class="p">(</span><span class="s1">&#39;KT87.AQ987.KJ95.&#39;</span><span class="p">)</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">h2</span><span class="p">)</span>
-<span class="n">t</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5, 4, 4, 0]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+   <span class="n">temp</span> <span class="o">=</span> <span class="n">make_bid_table</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span>
+   <span class="n">primary</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+   <span class="n">secondary</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ts&#39;</span><span class="p">:</span> <span class="n">ts</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">:</span> <span class="n">primary</span> <span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="n">secondary</span><span class="p">}</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="n">t</span><span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;clubs&#39;</span> <span class="p">):</span>
+      <span class="n">temp</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span>
+      <span class="n">t</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;clubs&#39;</span>
+      <span class="n">t</span><span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+   <span class="k">return</span> <span class="n">t</span>
 </pre></div>
 </div>
 </div>
@@ -670,13 +608,22 @@ Total points = 19  or RS points =  19
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="BlueClubOpen.html"
+       href="DuplicateScoring.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Opening Bids</p>
+        <p class="prev-next-title">Scoring Well at Duplicate</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="bc_sandbox.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Sandbox</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
