@@ -411,21 +411,25 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> The North hand has total points = 15
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\rsinn\anaconda3\envs\bridge\Lib\site-packages\requests\__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> The North hand has total points = 19
 
- The North hand is a 2-suiter :  {&#39;ts&#39;: True, &#39;p&#39;: &#39;Clubs&#39;, &#39;s&#39;: &#39;Hearts&#39;}
-              5
-              J7542
-              AK
-              K8543
-KQJ3                        942
-KQ                          T93
-T64                         J85
-AJ96                        QT72
-              AT876
-              A86
-              Q9732
-              ---
+ The North hand is a 2-suiter :  {&#39;ts&#39;: True, &#39;p&#39;: &#39;Hearts&#39;, &#39;s&#39;: &#39;Clubs&#39;}
+              A
+              KJ652
+              AQ8
+              KT95
+KQJT8762                    543
+97                          43
+95                          KJ4
+2                           J8643
+              9
+              AQT8
+              T7632
+              AQ7
 </pre></div>
 </div>
 </div>
@@ -445,25 +449,25 @@ AJ96                        QT72
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              K986
-              972
-              Q954
-              QT
-AJ7                         532
-T83                         KJ5
-AK83                        T
-975                         AKJ864
-              QT4
-              AQ64
-              J762
-              32
-♠ K986
-♥ 972
-♦ Q954
-♣ QT
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              6
+              KJT9
+              AK983
+              KQ3
+J72                         QT9853
+Q842                        A3
+QJT64                       5
+6                           AJ94
+              AK4
+              765
+              72
+              T8752
+♠ 6
+♥ KJT9
+♦ AK983
+♣ KQ3
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ts&#39;: False, &#39;p&#39;: &#39;Spades&#39;, &#39;s&#39;: &#39;Diamonds&#39;}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ts&#39;: True, &#39;p&#39;: &#39;Diamonds&#39;, &#39;s&#39;: &#39;Hearts&#39;}
 </pre></div>
 </div>
 </div>
@@ -668,6 +672,44 @@ AK83                        T
         </tr>
     </tbody>
 </table></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dd1</span> <span class="o">=</span> <span class="n">generate_deal</span><span class="p">(</span><span class="s1">&#39;hcp(north) &gt;= 11 &amp;&amp; shape(north, any 5xxx + 65xx + any 75xx + any 7xxx + any 8xxx)&#39;</span><span class="p">)</span>
+<span class="n">hand</span> <span class="o">=</span> <span class="n">dd1</span><span class="o">.</span><span class="n">north</span>
+<span class="n">dd1</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
+<span class="c1"># print(&#39;\n The North hand has total points =&#39; , points_rs(hand))</span>
+<span class="c1"># print(&#39; The North hand is a 2-suiter: &#39;, twosuiter(hand))</span>
+<span class="c1"># temp = make_bid_table(hand)</span>
+<span class="c1"># temp.sort(4, True)</span>
+<span class="n">hand</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
+<span class="n">twosuiter</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              975
+              K8
+              AQ964
+              A52
+KJ643                       82
+Q9                          JT532
+853                         JT2
+QJ4                         KT3
+              AQT
+              A764
+              K7
+              9876
+♠ 975
+♥ K8
+♦ AQ964
+♣ A52
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ts&#39;: False, &#39;p&#39;: &#39;Diamonds&#39;, &#39;s&#39;: &#39;Clubs&#39;}
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 
