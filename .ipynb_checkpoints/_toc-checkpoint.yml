@@ -2,12 +2,18 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: BlueClub
-chapters:
-- file: BlueClubOpen
-- file: BlueClubRespond
-- file: Bidding
-- file: DuplicateScoring
-- file: bc_functions
-- file: bc_sandbox
-- file: bc_bids
+root: Introduction
+parts:
+  - caption: Blue Club Strategy
+    chapters:
+    - file: OpeningBids
+    - file: RespondingBids
+    - file: BiddingExamples
+  - caption: Bridge Resources
+    chapters:
+    - file: DuplicateScoring
+  - caption: Python Code
+    chapters:
+    - file: bc_functions
+    - file: bc_bids
+    - file: bc_sandbox

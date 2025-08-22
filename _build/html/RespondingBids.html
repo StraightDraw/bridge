@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Blue Club Bidding Functions &#8212; Blue Club Dahlonega</title>
+    <title>Responding Bids &#8212; Blue Club Dahlonega</title>
   
   
   
@@ -57,11 +57,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'bc_bids';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'RespondingBids';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Sandbox" href="bc_sandbox.html" />
-    <link rel="prev" title="Blue Club Functions" href="bc_functions.html" />
+    <link rel="next" title="Bidding the Hands in Blue Club Dahlonega" href="BiddingExamples.html" />
+    <link rel="prev" title="Opening Bids" href="OpeningBids.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,9 +182,9 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Blue Club Strategy</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="OpeningBids.html">Opening Bids</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RespondingBids.html">Responding Bids</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Responding Bids</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BiddingExamples.html">Bidding the Hands in Blue Club Dahlonega</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridge Resources</span></p>
@@ -190,9 +192,9 @@
 <li class="toctree-l1"><a class="reference internal" href="DuplicateScoring.html">Scoring Well at Duplicate</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Code</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="bc_functions.html">Blue Club Functions</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Blue Club Bidding Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bc_bids.html">Blue Club Bidding Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bc_sandbox.html">Sandbox</a></li>
 </ul>
 
@@ -265,7 +267,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbc_bids.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FRespondingBids.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +297,7 @@
       
       
       
-      <li><a href="_sources/bc_bids.ipynb" target="_blank"
+      <li><a href="_sources/RespondingBids.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +368,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -377,11 +381,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Blue Club Bidding Functions</h1>
+    <h1>Responding Bids</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#responding-to-an-opening-bid-of-1-diamondsuit-1-heartsuit-or-1-spadesuit">Responding to an Opening Bid of 1<span class="math notranslate nohighlight">\(\diamondsuit\)</span>, 1<span class="math notranslate nohighlight">\(\heartsuit\)</span> or 1<span class="math notranslate nohighlight">\(\spadesuit\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#responding-to-an-opening-bid-of-1-clubsuit">Responding to an Opening Bid of 1<span class="math notranslate nohighlight">\(\clubsuit\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#responding-to-an-opening-bid-of-1nt">Responding to an Opening Bid of 1NT</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -391,98 +405,146 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="blue-club-bidding-functions">
-<h1>Blue Club Bidding Functions<a class="headerlink" href="#blue-club-bidding-functions" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Standard Datascience initialization code plus Pandas.</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">datascience</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plots</span>
-<span class="n">plots</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">stats</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">endplay</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">import_ipynb</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">endplay.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">Deal</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">bc_functions</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span> <span class="p">;</span>
-</pre></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="responding-bids">
+<h1>Responding Bids<a class="headerlink" href="#responding-bids" title="Link to this heading">#</a></h1>
+<p>Blue Club Dahlonega embraces the limiting nature of nearly every opening bid. Responder has only limit bids to offer with 2/1 bids game forcing as in most modern systems. A quick overview of responses shows the outline of the limit bids:</p>
+<ul class="simple">
+<li><p>Lowest level: 7-11 HCP.</p></li>
+<li><p>Raise: 12-16 HCP (standard 2/1 bid).</p></li>
+<li><p>Jump raise: 17-21 HCP</p></li>
+<li><p>Double-jump raise: Splinter</p></li>
+</ul>
+<p>The “2 over 1” promises standard opening values as is typical in modern bridge systems. A jump raise indicates a monster hand 17 - 21 HCP. A triple jump raise is a splinter bid indicating 4-card support or better for partner’s suit and control of the suit bid. A splinter bid is forcing to game and indicates at least 12 points.</p>
+<section id="responding-to-an-opening-bid-of-1-diamondsuit-1-heartsuit-or-1-spadesuit">
+<h2>Responding to an Opening Bid of 1<span class="math notranslate nohighlight">\(\diamondsuit\)</span>, 1<span class="math notranslate nohighlight">\(\heartsuit\)</span> or 1<span class="math notranslate nohighlight">\(\spadesuit\)</span><a class="headerlink" href="#responding-to-an-opening-bid-of-1-diamondsuit-1-heartsuit-or-1-spadesuit" title="Link to this heading">#</a></h2>
+<table style="width:90%">
+  <colgroup>
+  <col span="1" style="width: 15%;">
+  <col span="1" style="width: 20%;">
+  <col span="1" style="width: 65%;">
+    </colgroup>
+  <tr>
+    <th>Response Bid</th>
+    <th>High Card Points</th> 
+    <th>Meaning</th>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">1$\heartsuit$ 1$\spadesuit$</td>
+    <td style="text-align: center; vertical-align: middle;">7 - 11</td>
+    <td>Game values unlikely, but at least 4 cards in suit bid.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">1NT</td>
+    <td style="text-align: center; vertical-align: middle;">21 - 23</td>
+    <td>Denial of fit with game values unlikely, this bid give opener the chance to show a second suit with a canape bid.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">2$\clubsuit$ 2$\diamondsuit$ </br> 2$\heartsuit$ 2$\spadesuit$</td>
+    <td style="text-align: center; vertical-align: middle;">12 - 16</td>
+    <td>Typical 2/1 game force, at least 4 cards in suit bid.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">2NT</td>
+    <td style="text-align: center; vertical-align: middle;">12 - 16</td>
+    <td>Balanced, poor support for partner's suit. Game invite to 3NT.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">3$\clubsuit$ 3$\diamondsuit$ </br> 3$\heartsuit$ 3$\spadesuit$</td>
+    <td style="text-align: center; vertical-align: middle;">17 - 21</td>
+    <td>This 3/1 is game forcing and slam seaking, at least 4 cards in suit bid.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">3NT</td>
+    <td style="text-align: center; vertical-align: middle;">17 - 21</td>
+    <td>Balanced, poor support for partner's suit.</td>
+  </tr>
+  <tr>
+    <td style="text-align: center; vertical-align: middle;">4$\clubsuit$ 4$\diamondsuit$ </br> 4$\heartsuit$ 4$\spadesuit$</td>
+    <td style="text-align: center; vertical-align: middle;">15 - 21</td>
+    <td>Splinter bid, game forcing and likely slam seaking. At least 4 card support for partner's suit with 1st round control of suit bid.</td>
+  </tr>
+</table></section>
+<section id="responding-to-an-opening-bid-of-1-clubsuit">
+<h2>Responding to an Opening Bid of 1<span class="math notranslate nohighlight">\(\clubsuit\)</span><a class="headerlink" href="#responding-to-an-opening-bid-of-1-clubsuit" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Response Bid</p></th>
+<th class="head"><p>High Card Points</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1<span class="math notranslate nohighlight">\(\diamondsuit\)</span></p></td>
+<td><p>7 - 11</p></td>
+<td><p>At least 4 diamonds. Can also be strong clubs with no other way to bid. Promises at least 3 diamonds even if it a stand-in for a club bid.</p></td>
+</tr>
+<tr class="row-odd"><td><p>1<span class="math notranslate nohighlight">\(\heartsuit\)</span> 1<span class="math notranslate nohighlight">\(\spadesuit\)</span></p></td>
+<td><p>7 - 11</p></td>
+<td><p>At least 4 cards in suit bid.</p></td>
+</tr>
+<tr class="row-even"><td><p>1NT</p></td>
+<td><p>7 - 11</p></td>
+<td><p>Balanced, denial, gives partner a second chance to show values.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2<span class="math notranslate nohighlight">\(\clubsuit\)</span> 2<span class="math notranslate nohighlight">\(\diamondsuit\)</span> </br> 2<span class="math notranslate nohighlight">\(\heartsuit\)</span> 2<span class="math notranslate nohighlight">\(\spadesuit\)</span></p></td>
+<td><p>12 - 16</p></td>
+<td><p>At least 4 cards in suit bid.</p></td>
+</tr>
+<tr class="row-even"><td><p>2NT</p></td>
+<td><p>12 - 16</p></td>
+<td><p>Balanced, poor support for partner’s suit. Partnership may have values for small slam.</p></td>
+</tr>
+<tr class="row-odd"><td><p>3<span class="math notranslate nohighlight">\(\clubsuit\)</span> 3<span class="math notranslate nohighlight">\(\diamondsuit\)</span> </br> 3<span class="math notranslate nohighlight">\(\heartsuit\)</span> 3<span class="math notranslate nohighlight">\(\spadesuit\)</span></p></td>
+<td><p>17 - 21</p></td>
+<td><p>Slam seaking, at least 4 cards in suit bid.</p></td>
+</tr>
+<tr class="row-even"><td><p>3NT</p></td>
+<td><p>17 - 21</p></td>
+<td><p>Balanced, awaiting developments. Slam values guaranteed, need fit.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+</section>
+<section id="responding-to-an-opening-bid-of-1nt">
+<h2>Responding to an Opening Bid of 1NT<a class="headerlink" href="#responding-to-an-opening-bid-of-1nt" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Response Bid</p></th>
+<th class="head"><p>High Card Points</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2<span class="math notranslate nohighlight">\(\clubsuit\)</span></p></td>
+<td><p>12 - 16</p></td>
+<td><p><strong>Stayman:</strong> 5-4 or better in the majors, game forcing.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2<span class="math notranslate nohighlight">\(\diamondsuit\)</span> 2<span class="math notranslate nohighlight">\(\heartsuit\)</span> 2<span class="math notranslate nohighlight">\(\spadesuit\)</span></p></td>
+<td><p>7 - 11</p></td>
+<td><p>Waiting, game possible, 4 or more cards in the suit bid.</p></td>
+</tr>
+<tr class="row-even"><td><p>3<span class="math notranslate nohighlight">\(\clubsuit\)</span> 3<span class="math notranslate nohighlight">\(\diamondsuit\)</span> </br> 3<span class="math notranslate nohighlight">\(\heartsuit\)</span> 3<span class="math notranslate nohighlight">\(\spadesuit\)</span></p></td>
+<td><p>12 - 16</p></td>
+<td><p>At least 4 cards in suit bid. Slam unlikely, but possible.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2NT</p></td>
+<td><p>12 - 16</p></td>
+<td><p>Balanced, waiting. Game force, but partnership may have values for small slam.</p></td>
+</tr>
+<tr class="row-even"><td><p>3<span class="math notranslate nohighlight">\(\clubsuit\)</span> 3<span class="math notranslate nohighlight">\(\diamondsuit\)</span> </br> 3<span class="math notranslate nohighlight">\(\heartsuit\)</span> 3<span class="math notranslate nohighlight">\(\spadesuit\)</span></p></td>
+<td><p>17 - 21</p></td>
+<td><p>Slam seaking, at least 4 cards in suit bid.</p></td>
+</tr>
+<tr class="row-odd"><td><p>3NT</p></td>
+<td><p>15 - 17</p></td>
+<td><p>Balanced, slam invitational.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">bid_nt</span><span class="p">(</span><span class="n">hd</span><span class="p">):</span>
-   <span class="n">bid</span> <span class="o">=</span> <span class="kc">False</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">notrump</span><span class="p">(</span><span class="n">hd</span><span class="p">)</span> <span class="p">):</span>
-      <span class="n">bid</span> <span class="o">=</span> <span class="mi">0</span>
-      <span class="n">pt</span> <span class="o">=</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hd</span><span class="p">)</span>
-      <span class="k">match</span> <span class="n">pt</span><span class="p">:</span>
-         <span class="k">case</span><span class="w"> </span><span class="k">_</span> <span class="k">if</span> <span class="n">pt</span> <span class="o">&lt;=</span> <span class="mi">17</span><span class="p">:</span>
-            <span class="n">bid</span> <span class="o">=</span> <span class="s1">&#39;1NT&#39;</span>
-         <span class="k">case</span><span class="w"> </span><span class="k">_</span> <span class="k">if</span> <span class="p">(</span><span class="mi">17</span> <span class="o">&lt;</span> <span class="n">pt</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">):</span>
-            <span class="n">bid</span> <span class="o">=</span> <span class="s1">&#39;2NT&#39;</span>
-         <span class="k">case</span><span class="w"> </span><span class="k">_</span> <span class="k">if</span> <span class="n">pt</span> <span class="o">&gt;=</span> <span class="mi">21</span><span class="p">:</span>
-            <span class="n">bid</span> <span class="o">=</span> <span class="s1">&#39;3NT&#39;</span>
-   <span class="k">return</span> <span class="n">bid</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">bid_std</span><span class="p">(</span><span class="n">hd</span><span class="p">):</span>
-   <span class="n">bid</span> <span class="o">=</span> <span class="kc">False</span>
-   <span class="k">if</span> <span class="p">(</span><span class="n">standard</span><span class="p">(</span><span class="n">hd</span><span class="p">)</span> <span class="ow">and</span> <span class="n">twosuiter</span><span class="p">(</span><span class="n">hd</span><span class="p">)</span> <span class="p">):</span>
-      <span class="n">bid</span> <span class="o">=</span> <span class="mi">0</span>
-   <span class="n">temp</span> <span class="o">=</span> <span class="n">make_bid_table</span><span class="p">(</span><span class="n">hd</span><span class="p">)</span>
-   <span class="n">s</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-   <span class="k">match</span> <span class="n">s</span><span class="p">:</span>
-      <span class="k">case</span> <span class="s1">&#39;spades&#39;</span> <span class="p">:</span>
-         <span class="n">bid</span> <span class="o">=</span> <span class="s1">&#39;1S&#39;</span>
-      <span class="k">case</span> <span class="s1">&#39;hearts&#39;</span> <span class="p">:</span>
-         <span class="n">bid</span> <span class="o">=</span> <span class="s1">&#39;1H&#39;</span>
-      <span class="k">case</span> <span class="s1">&#39;diamonds&#39;</span> <span class="p">:</span>
-         <span class="n">bid</span> <span class="o">=</span> <span class="s1">&#39;1D&#39;</span>
-      <span class="k">case</span> <span class="s1">&#39;clubs&#39;</span> <span class="p">:</span>
-         <span class="n">bid</span> <span class="o">=</span> <span class="kc">False</span>
-   <span class="k">return</span> <span class="n">bid</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">generate_deal</span><span class="p">(</span><span class="s1">&#39;hcp(north) &gt;= 11 &amp;&amp; shape(north, any 54xx + any 55xx + any 64xx)&#39;</span><span class="p">)</span>
-<span class="n">hand</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">north</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> The North hand has total points =&#39;</span> <span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> The North hand is a 2-suiter : &#39;</span><span class="p">,</span> <span class="n">twosuiter</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
-
-<span class="n">d</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> The North hand has total points = 15
-
- The North hand is a 2-suiter :  {&#39;ts&#39;: True, &#39;p&#39;: &#39;Hearts&#39;, &#39;s&#39;: &#39;Diamonds&#39;}
-              K942
-              T9652
-              AKQ2
-              ---
-J83                         QT76
-Q                           J83
-JT43                        9875
-Q9832                       75
-              A5
-              AK74
-              6
-              AKJT64
-</pre></div>
-</div>
-</div>
-</div>
+<p>A difficulty arises when the responder to 1NT has 7 - 11 HCP and a balanced hand. Bidding 2 NT will mislead partner about the high card points we have. Responder must bid a 4-card suit, but that suit might be weak. However, there is no better solution.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -516,20 +578,20 @@ Q9832                       75
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="bc_functions.html"
+       href="OpeningBids.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Blue Club Functions</p>
+        <p class="prev-next-title">Opening Bids</p>
       </div>
     </a>
     <a class="right-next"
-       href="bc_sandbox.html"
+       href="BiddingExamples.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Sandbox</p>
+        <p class="prev-next-title">Bidding the Hands in Blue Club Dahlonega</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -539,6 +601,23 @@ Q9832                       75
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#responding-to-an-opening-bid-of-1-diamondsuit-1-heartsuit-or-1-spadesuit">Responding to an Opening Bid of 1<span class="math notranslate nohighlight">\(\diamondsuit\)</span>, 1<span class="math notranslate nohighlight">\(\heartsuit\)</span> or 1<span class="math notranslate nohighlight">\(\spadesuit\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#responding-to-an-opening-bid-of-1-clubsuit">Responding to an Opening Bid of 1<span class="math notranslate nohighlight">\(\clubsuit\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#responding-to-an-opening-bid-of-1nt">Responding to an Opening Bid of 1NT</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
