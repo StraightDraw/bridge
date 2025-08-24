@@ -9,6 +9,10 @@ parts:
     - file: OpeningBids
     - file: RespondingBids
     - file: BiddingExamples
+  - caption: Interference
+    chapters:
+    - file: CompetitveAuctions
+    - file: DefensiveConventions
   - caption: Bridge Resources
     chapters:
     - file: DuplicateScoring

@@ -184,6 +184,10 @@
 <li class="toctree-l1"><a class="reference internal" href="RespondingBids.html">Responding Bids</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BiddingExamples.html">Bidding the Hands in Blue Club Dahlonega</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="DefensiveConventions.html">Defensive Conventions</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridge Resources</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="DuplicateScoring.html">Scoring Well at Duplicate</a></li>
@@ -405,31 +409,45 @@ document.write(`
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">import_ipynb</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">endplay.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">Deal</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">bc_functions</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bc_functions</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span> <span class="p">;</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bc_bids</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span> <span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\rsinn\anaconda3\envs\bridge\Lib\site-packages\requests\__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> The North hand has total points = 19
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> The North hand has total points = 12
+{&#39;ts&#39;: False, &#39;p&#39;: &#39;Diamonds&#39;, &#39;s&#39;: &#39;Hearts&#39;}
+{&#39;wts&#39;: True, &#39;p&#39;: &#39;Diamonds&#39;, &#39;s&#39;: &#39;Hearts&#39;}
+              J6
+              K872
+              A543
+              KJ6
+K                           Q75432
+AT4                         95
+KQ7                         T862
+AQ9752                      T
+              AT98
+              QJ63
+              J9
+              843
+ The North hand is balanced:  True
+ The North hand is semibalanced:  False
 
- The North hand is a 2-suiter :  {&#39;ts&#39;: True, &#39;p&#39;: &#39;Hearts&#39;, &#39;s&#39;: &#39;Clubs&#39;}
-              A
-              KJ652
-              AQ8
-              KT95
-KQJT8762                    543
-97                          43
-95                          KJ4
-2                           J8643
-              9
-              AQT8
-              T7632
-              AQ7
+ The North hand has total points = 14
+
+ The North hand is a 2-suiter :  {&#39;ts&#39;: True, &#39;p&#39;: &#39;Clubs&#39;, &#39;s&#39;: &#39;Diamonds&#39;}
+              8
+              Q54
+              A872
+              AQT94
+AKT6                        QJ92
+AK73                        T92
+JT4                         Q9653
+82                          K
+              7543
+              J86
+              K
+              J7653
 </pre></div>
 </div>
 </div>
@@ -449,25 +467,25 @@ KQJT8762                    543
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              6
-              KJT9
-              AK983
-              KQ3
-J72                         QT9853
-Q842                        A3
-QJT64                       5
-6                           AJ94
-              AK4
-              765
-              72
-              T8752
-♠ 6
-♥ KJT9
-♦ AK983
-♣ KQ3
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              AK85
+              T842
+              7542
+              Q
+T964                        J3
+AKJ                         9753
+6                           AKJ98
+AT874                       93
+              Q72
+              Q6
+              QT3
+              KJ652
+♠ AK85
+♥ T842
+♦ 7542
+♣ Q
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ts&#39;: True, &#39;p&#39;: &#39;Diamonds&#39;, &#39;s&#39;: &#39;Hearts&#39;}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ts&#39;: False, &#39;p&#39;: &#39;Spades&#39;, &#39;s&#39;: &#39;Hearts&#39;}
 </pre></div>
 </div>
 </div>
@@ -677,36 +695,33 @@ QJT64                       5
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dd1</span> <span class="o">=</span> <span class="n">generate_deal</span><span class="p">(</span><span class="s1">&#39;hcp(north) &gt;= 11 &amp;&amp; shape(north, any 5xxx + 65xx + any 75xx + any 7xxx + any 8xxx)&#39;</span><span class="p">)</span>
 <span class="n">hand</span> <span class="o">=</span> <span class="n">dd1</span><span class="o">.</span><span class="n">north</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> The North hand has total points =&#39;</span> <span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">twosuiter</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">weaktwosuiter</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
 <span class="n">dd1</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
-<span class="c1"># print(&#39;\n The North hand has total points =&#39; , points_rs(hand))</span>
-<span class="c1"># print(&#39; The North hand is a 2-suiter: &#39;, twosuiter(hand))</span>
-<span class="c1"># temp = make_bid_table(hand)</span>
-<span class="c1"># temp.sort(4, True)</span>
-<span class="n">hand</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
-<span class="n">twosuiter</span><span class="p">(</span><span class="n">hand</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; The North hand is balanced: &#39;</span><span class="p">,</span> <span class="n">balanced</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; The North hand is semibalanced: &#39;</span> <span class="p">,</span> <span class="n">semibalanced</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              975
-              K8
-              AQ964
-              A52
-KJ643                       82
-Q9                          JT532
-853                         JT2
-QJ4                         KT3
-              AQT
-              A764
-              K7
-              9876
-♠ 975
-♥ K8
-♦ AQ964
-♣ A52
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ts&#39;: False, &#39;p&#39;: &#39;Diamonds&#39;, &#39;s&#39;: &#39;Clubs&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> The North hand has total points = 14
+{&#39;ts&#39;: False, &#39;p&#39;: &#39;Hearts&#39;, &#39;s&#39;: &#39;Diamonds&#39;}
+{&#39;wts&#39;: False, &#39;p&#39;: &#39;&#39;, &#39;s&#39;: &#39;&#39;}
+              J96
+              QJT83
+              A43
+              AJ
+Q                           72
+A2                          9765
+KT862                       QJ5
+T8532                       K964
+              AKT8543
+              K4
+              97
+              Q7
+ The North hand is balanced:  True
+ The North hand is semibalanced:  True
 </pre></div>
 </div>
 </div>

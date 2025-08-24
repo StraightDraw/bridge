@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Blue Club Dahlonega</title>
+    <title>Competitive Auctions &#8212; Blue Club Dahlonega</title>
   
   
   
@@ -57,9 +57,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'README';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'CompetitveAuctions';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Defensive Conventions" href="DefensiveConventions.html" />
+    <link rel="prev" title="Bidding the Hands in Blue Club Dahlonega" href="BiddingExamples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +125,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -186,8 +188,8 @@
 <li class="toctree-l1"><a class="reference internal" href="BiddingExamples.html">Bidding the Hands in Blue Club Dahlonega</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Interference</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="CompetitveAuctions.html">Competitive Auctions</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Competitive Auctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DefensiveConventions.html">Defensive Conventions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridge Resources</span></p>
@@ -270,7 +272,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FCompetitveAuctions.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -300,7 +302,7 @@
       
       
       
-      <li><a href="_sources/README.md" target="_blank"
+      <li><a href="_sources/CompetitveAuctions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +312,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -384,7 +386,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Competitive Auctions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,9 +395,9 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overcalls-of-1-clubsuit">Overcalls of <span class="math notranslate nohighlight">\(1\clubsuit\)</span></a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -406,7 +408,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>Developing a strong club bidding system for bridge based upon the Italian Blue Club system of the 1960’s.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="competitive-auctions">
+<h1>Competitive Auctions<a class="headerlink" href="#competitive-auctions" title="Link to this heading">#</a></h1>
+<p>Opponents know that they cannot allow time and bidding space to a team bidding in Blue Club style, else the Blue Club team will find a good contract and possibly a slam that other teams may not. Thus, the response to a strong club system in modern bridge circles is aggression generally in the form of overalls.</p>
+<p>Yet, the Blue Club player has little to fear from overcalls. If partner opens <span class="math notranslate nohighlight">\(1\clubsuit\)</span> and we have 7-11 points, our Blue Club partnership has enough points for game. The intervening weak 2 overcall doesn’t change anything except the amount of information we have on how to play the hand as declarer once in contract. The opponents do well when they rather miraculously find a superfit. Knowing they have good trumps, they can bid with some degree of confidence at the 3-level which does seriously erode the Blue Club team’s opportunities to exchange information and find the correct contract.</p>
+<p>Given the defense against Blue Club tends to alert them to the best way to play the hand, many responses to strong club systems have become gimicky with conventions like <strong>suction</strong>. Here, the overcalls have dual meanings. Surely this hides information from the Blue Club team, but it hides information from partner, too. Perhaps <strong>Mathe</strong> is reasonably natural, but other responses to strong club bidding like <strong>CRASH</strong> are a bit articifial and require good memory skills. Staying organized and calm, the Blue Club player can still accurately paint a picture of her hand. The<a class="reference internal" href="#../DefensiveConventions.ipynb"><span class="xref myst">Defensive Conventions page</span></a> describes the major forms that the interference will take.</p>
+<section id="overcalls-of-1-clubsuit">
+<h2>Overcalls of <span class="math notranslate nohighlight">\(1\clubsuit\)</span><a class="headerlink" href="#overcalls-of-1-clubsuit" title="Link to this heading">#</a></h2>
+<p>Many modern players will overcall a <span class="math notranslate nohighlight">\(1\clubsuit\)</span> opening bid even if light just to interfere. In Blue Club, we have the following general ideas to a Weak 2 overcall remembering that, at 7 or more points, we likely have game-going values:</p>
+<ul class="simple">
+<li><p>Pass: 6 or fewer points</p></li>
+<li><p>2-level suit bid: single-suiter, natural, 7-11 points</p></li>
+<li><p>2NT: balanced or semi-balanced with 7-11 points (may not have opponent’s suit controlled)</p></li>
+<li><p>3-level suit bid: natural, 12-16 points</p></li>
+<li><p>3NT: balanced or semi-balanced 12 - 16 points (opponent’s suit controlled)</p></li>
+<li><p>Double: weak 2-suiter in the unbid suits, 7 - 16 points</p></li>
+</ul>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -438,6 +457,24 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="BiddingExamples.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bidding the Hands in Blue Club Dahlonega</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="DefensiveConventions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Defensive Conventions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -453,9 +490,9 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overcalls-of-1-clubsuit">Overcalls of <span class="math notranslate nohighlight">\(1\clubsuit\)</span></a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

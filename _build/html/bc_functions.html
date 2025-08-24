@@ -185,6 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="RespondingBids.html">Responding Bids</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BiddingExamples.html">Bidding the Hands in Blue Club Dahlonega</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="DefensiveConventions.html">Defensive Conventions</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridge Resources</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="DuplicateScoring.html">Scoring Well at Duplicate</a></li>
@@ -405,12 +409,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\rsinn\anaconda3\envs\bridge\Lib\site-packages\requests\__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
-  warnings.warn(
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -469,8 +467,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">quals</span><span class="p">(</span><span class="n">h</span><span class="p">):</span>
-   <span class="n">sq</span> <span class="o">=</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="p">;</span> <span class="n">hq</span> <span class="o">=</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="p">;</span> <span class="n">dq</span> <span class="o">=</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="p">;</span> <span class="n">cq</span> <span class="o">=</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="p">;</span>
-   <span class="n">q</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">(</span><span class="n">sq</span><span class="p">,</span> <span class="n">hq</span><span class="p">,</span> <span class="n">dq</span><span class="p">,</span> <span class="n">cq</span><span class="p">)</span>
+   <span class="n">q</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">(</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="p">,</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="p">,</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="p">,</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="p">)</span> <span class="p">;</span>
    <span class="k">return</span> <span class="n">q</span>
 </pre></div>
 </div>
@@ -527,6 +524,26 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">semibalanced</span><span class="p">(</span><span class="n">hnd</span><span class="p">):</span>
+   <span class="n">ball</span> <span class="o">=</span> <span class="kc">False</span> <span class="p">;</span> <span class="n">shap</span> <span class="o">=</span> <span class="kc">False</span> <span class="p">;</span> <span class="n">pts</span> <span class="o">=</span> <span class="kc">False</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="nb">min</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="p">):</span>
+      <span class="n">shap</span> <span class="o">=</span> <span class="kc">True</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">):</span>
+      <span class="n">pts</span> <span class="o">=</span> <span class="kc">True</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">):</span>
+      <span class="n">pts</span> <span class="o">=</span> <span class="kc">True</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">):</span>
+      <span class="n">pts</span> <span class="o">=</span> <span class="kc">True</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="p">):</span>
+      <span class="n">pts</span> <span class="o">=</span> <span class="kc">True</span>
+   <span class="n">ball</span> <span class="o">=</span> <span class="n">shap</span> <span class="ow">and</span> <span class="n">pts</span>
+   <span class="k">return</span> <span class="n">ball</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">notrump</span><span class="p">(</span><span class="n">hnd</span><span class="p">):</span>
    <span class="n">NT</span> <span class="o">=</span> <span class="kc">False</span>
    <span class="k">if</span> <span class="p">(</span> <span class="n">balanced</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="p">):</span>
@@ -572,7 +589,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">twosuiter</span><span class="p">(</span><span class="n">hnd</span><span class="p">):</span>
-   <span class="n">ts</span> <span class="o">=</span> <span class="kc">False</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">);</span> <span class="n">temp</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="p">;</span>
+   <span class="n">ts</span> <span class="o">=</span> <span class="kc">False</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">);</span> <span class="n">temp</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="p">;</span> <span class="n">primary</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="p">;</span> <span class="n">secondary</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="p">;</span>
    <span class="k">if</span> <span class="p">(</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="p">):</span>
       <span class="n">ts</span> <span class="o">=</span> <span class="kc">True</span>
    <span class="n">temp</span> <span class="o">=</span> <span class="n">make_bid_table</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span>
@@ -584,6 +601,61 @@ document.write(`
       <span class="n">secondary</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
    <span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ts&#39;</span><span class="p">:</span> <span class="n">ts</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">:</span> <span class="n">primary</span> <span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="n">secondary</span><span class="p">}</span>
    <span class="k">return</span> <span class="n">t</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">weaktwosuiter</span><span class="p">(</span><span class="n">hnd</span><span class="p">):</span>
+   <span class="n">wts</span> <span class="o">=</span> <span class="kc">False</span> <span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="p">;</span> <span class="n">pts</span> <span class="o">=</span> <span class="kc">False</span><span class="p">;</span> 
+   <span class="n">primary</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="p">;</span> <span class="n">secondary</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="p">;</span>
+   <span class="n">qual</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">quals</span><span class="p">(</span><span class="n">hnd</span><span class="p">))</span> <span class="p">;</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="n">qual</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">4.3</span> <span class="ow">and</span> <span class="n">qual</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">4.3</span> <span class="p">):</span>
+      <span class="n">pts</span> <span class="o">=</span> <span class="kc">True</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="n">pts</span> <span class="ow">and</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="ow">and</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="p">):</span>
+      <span class="n">wts</span> <span class="o">=</span> <span class="kc">True</span>
+   <span class="k">if</span> <span class="n">wts</span><span class="p">:</span>
+      <span class="n">temp</span> <span class="o">=</span> <span class="n">make_bid_table</span><span class="p">(</span><span class="n">hnd</span><span class="p">)</span> <span class="p">;</span>
+      <span class="n">primary</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+      <span class="n">secondary</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">t</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;wts&#39;</span><span class="p">:</span> <span class="n">wts</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">:</span> <span class="n">primary</span> <span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="n">secondary</span><span class="p">}</span>
+   <span class="k">return</span> <span class="n">t</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dd1</span> <span class="o">=</span> <span class="n">generate_deal</span><span class="p">(</span><span class="s1">&#39;hcp(north) &gt;= 11 &amp;&amp; shape(north, any 44xx + any 8xxx)&#39;</span><span class="p">)</span>
+<span class="n">hand</span> <span class="o">=</span> <span class="n">dd1</span><span class="o">.</span><span class="n">north</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> The North hand has total points =&#39;</span> <span class="p">,</span> <span class="n">points_rs</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">twosuiter</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">weaktwosuiter</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
+<span class="n">dd1</span><span class="o">.</span><span class="n">pprint</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; The North hand is balanced: &#39;</span><span class="p">,</span> <span class="n">balanced</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; The North hand is semibalanced: &#39;</span> <span class="p">,</span> <span class="n">semibalanced</span><span class="p">(</span><span class="n">hand</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> The North hand has total points = 15
+{&#39;ts&#39;: False, &#39;p&#39;: &#39;Spades&#39;, &#39;s&#39;: &#39;Clubs&#39;}
+{&#39;wts&#39;: False, &#39;p&#39;: &#39;&#39;, &#39;s&#39;: &#39;&#39;}
+              AJ75
+              KQ
+              K52
+              QT95
+K962                        Q
+J72                         A8543
+T8643                       AQ9
+2                           KJ86
+              T843
+              T96
+              J7
+              A743
+ The North hand is balanced:  True
+ The North hand is semibalanced:  True
 </pre></div>
 </div>
 </div>
