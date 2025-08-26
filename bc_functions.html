@@ -187,6 +187,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Interference</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="CompetitveAuctions.html">Competitive Auctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DefensiveConventions.html">Defensive Conventions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridge Resources</span></p>
@@ -528,13 +529,13 @@ document.write(`
    <span class="n">ball</span> <span class="o">=</span> <span class="kc">False</span> <span class="p">;</span> <span class="n">shap</span> <span class="o">=</span> <span class="kc">False</span> <span class="p">;</span> <span class="n">pts</span> <span class="o">=</span> <span class="kc">False</span>
    <span class="k">if</span> <span class="p">(</span> <span class="nb">min</span><span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="p">):</span>
       <span class="n">shap</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">if</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">):</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">spades</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">2.3</span> <span class="p">):</span>
       <span class="n">pts</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">if</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">):</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">hearts</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">2.3</span><span class="p">):</span>
       <span class="n">pts</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">if</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">):</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">diamonds</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">2.3</span><span class="p">):</span>
       <span class="n">pts</span> <span class="o">=</span> <span class="kc">True</span>
-   <span class="k">if</span> <span class="p">(</span> <span class="nb">len</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">hcp</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="p">):</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="n">bid_qual</span><span class="p">(</span><span class="n">hnd</span><span class="o">.</span><span class="n">clubs</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">2.3</span> <span class="p">):</span>
       <span class="n">pts</span> <span class="o">=</span> <span class="kc">True</span>
    <span class="n">ball</span> <span class="o">=</span> <span class="n">shap</span> <span class="ow">and</span> <span class="n">pts</span>
    <span class="k">return</span> <span class="n">ball</span>
@@ -639,21 +640,21 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> The North hand has total points = 15
-{&#39;ts&#39;: False, &#39;p&#39;: &#39;Spades&#39;, &#39;s&#39;: &#39;Clubs&#39;}
-{&#39;wts&#39;: False, &#39;p&#39;: &#39;&#39;, &#39;s&#39;: &#39;&#39;}
-              AJ75
-              KQ
-              K52
-              QT95
-K962                        Q
-J72                         A8543
-T8643                       AQ9
-2                           KJ86
-              T843
-              T96
-              J7
-              A743
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> The North hand has total points = 13
+{&#39;ts&#39;: False, &#39;p&#39;: &#39;Spades&#39;, &#39;s&#39;: &#39;Diamonds&#39;}
+{&#39;wts&#39;: True, &#39;p&#39;: &#39;Spades&#39;, &#39;s&#39;: &#39;Diamonds&#39;}
+              KQT4
+              KT
+              AJ92
+              642
+92                          873
+8742                        QJ53
+KQ5                         863
+AQ83                        K97
+              AJ65
+              A96
+              T74
+              JT5
  The North hand is balanced:  True
  The North hand is semibalanced:  True
 </pre></div>
