@@ -4,8 +4,10 @@
 format: jb-book
 root: Introduction
 parts:
-  - caption: Blue Club Strategy
+  - caption: The Blue Club Advantage
     chapters:
+    - file: Strategy_Bidding
+    - file: Strategy_Handling_Aggression
     - file: OpeningBids
     - file: RespondingBids
     - file: BiddingExamples
