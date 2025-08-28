@@ -415,6 +415,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intial-code-block">Intial Code Block</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code">Code</a></li>
 </ul>
             </nav>
         </div>
@@ -429,16 +430,16 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="blue-club-dahlonega">
 <h1>Blue Club Dahlonega<a class="headerlink" href="#blue-club-dahlonega" title="Link to this heading">#</a></h1>
 <p><em>by robb sinn</em></p>
-<p>Blue Club Dahlonega explores a bidding system for bridge recalling the legendary strong <span class="math notranslate nohighlight">\(1\clubsuit\)</span> system developed and deployed in top tier competitions by the Italian national team. Blue Club Dahlonega leverages the aggressive vibe of the <span class="math notranslate nohighlight">\(1\clubsuit\)</span> bid and the 4-card major openings while minimizing the disruptive chaos that oppoents can inflict with competitive bidding.</p>
+<p>Blue Club Dahlonega invents a bidding system for bridge recalling the legendary strong <span class="math notranslate nohighlight">\(1\clubsuit\)</span> system developed and deployed in top tier competitions by the Italian national team. Blue Club Dahlonega leverages the aggressive vibe of the <span class="math notranslate nohighlight">\(1\clubsuit\)</span> bid and the 4-card major openings while minimizing the disruptive chaos that oppoents can inflict with competitive bidding.</p>
 <aside class="sidebar">
 <p class="sidebar-title"><strong>Italian Blue Club</strong></p>
-<p>Benito Garozzo lead the development of the Blue Club system which gained popularity when used by the Italian national team in the 1960’s. Giorgio Belladonna and Pietro Forquet were great Italian national team players who helped with the development, as well.</p>
+<p>Benito Garozzo led the development of the Blue Club system which gained popularity when used by the Italian national team in the 1960’s. Giorgio Belladonna and Pietro Forquet were great Italian national team players who helped with the development, as well.</p>
 </aside>
 <section id="early-bidding-quick-and-accurate">
 <h2>Early Bidding: Quick and Accurate<a class="headerlink" href="#early-bidding-quick-and-accurate" title="Link to this heading">#</a></h2>
 <p>Blue Club quickly deploys an accurate picture of one’s hand strength and shape:</p>
 <ul class="simple">
-<li><p>Early bids <strong>limit the power</strong> of our holdings to a small range of points.</p></li>
+<li><p>Early bids <strong>limit the power</strong> of our holdings to a specific range of points.</p></li>
 <li><p>Early bids accurately describe <strong>distributional features</strong> of the hand.</p></li>
 </ul>
 <p>Specific features of Blue Club assist us as we bid:</p>
@@ -447,7 +448,7 @@ document.write(`
 <li><p><strong>Canape bidding</strong> alerts partner to a two-suiter with, at worst, a 54xx shape.</p></li>
 <li><p>Opening <strong>4-Card majors</strong> adds aggression and a preemptory vibe.</p></li>
 </ol>
-<p>The strong club opening not only provides an early alert to a big hand, the standard openings at level of 1 are restricted to 12-16 points which makes responder’s job much easier. Since 4-card majors are opened, Blue Club openings possess a preemptive vibe. The canape bids display two-suiters hands with shape of 54xx (minimum) while not promising additional values.</p>
+<p>The strong club opening not only provides an early alert to a big hand, the standard openings at level of 1 are restricted to a range of 12-16 points which makes responder’s job much easier. Since 4-card majors are opened, strong club openings possess a preemptive vibe. The canape bids display two-suiters hands with shape of 54xx (minimum) while not promising additional values.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Game of Suits
@@ -493,12 +494,12 @@ Original Blue Team players suggested that bridge is not a game of points. Instea
 </section>
 <section id="natural-bidding-systems">
 <h3>Natural Bidding Systems<a class="headerlink" href="#natural-bidding-systems" title="Link to this heading">#</a></h3>
-<p>The problem of accuracy has led to a multiplicity of bridge bidding conventions. Transfer bids, inverted minors, and Drury bids exemplify how unnatural many bids in modern bridge can be. Artificial bids may result in misunderstandings. The more natural our bidding is, the more likely partner will know how to respond. Seeking accuracy for every eventuality results in a problem of memory – to much information to remember easily at the bridge table.</p>
+<p>The problem of accuracy has led to a multiplicity of bridge bidding conventions. Relays, transfer bids, inverted minors, and Drury bids exemplify how unnatural many bids in modern bridge can be. Artificial bids may result in misunderstandings. The more natural our bidding is, the more likely partner will know how to respond. Seeking accuracy for every eventuality results in a problem of memory – too much information to remember easily at the bridge table.</p>
 <p>Of course, many bridge hands are thorny and provide challenges to natural bidding. Hence, we need <strong>some</strong> conventions. In this system we will use the following conventions:</p>
 <ul class="simple">
 <li><p>Stayman</p></li>
 <li><p><a class="reference external" href="https://www.bridgebum.com/splinters.php">Splinters</a></p></li>
-<li><p><a class="reference external" href="https://www.bridgebum.com/kantar_cue_bid.ph">Cue Bids</a></p></li>
+<li><p><a class="reference external" href="https://www.bridgebum.com/kantar_cue_bid.php">Cue Bids</a></p></li>
 <li><p><a class="reference external" href="https://www.bridgebum.com/roman_key_card_blackwood.php">Roman Key Card Blackwood</a> (1430)</p></li>
 </ul>
 <p>Note that Stayman in Blue Club requires a slightly different treament due to the fact we can open 4-card majors with <span class="math notranslate nohighlight">\(1\heartsuit\)</span> or <span class="math notranslate nohighlight">\(1\spadesuit\)</span>. Alex Knox has a good treament: <a class="reference external" href="https://acblunit390.org/improve-your-game/blue-club-calgary-casual/">Blue Club Calgary, pp. 49-50</a>.</p>
@@ -541,20 +542,18 @@ Original Blue Team players suggested that bridge is not a game of points. Instea
 <li><p>scipy.stats (evaluation of information from tables)</p></li>
 </ol>
 <p>You can see the initial code block we will need detailed below. Notice that we load matplotlib and use the style created by the folks at 538.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Standard datascience initialization code with endplay added for bridge functionality.</span>
-
-<span class="kn">from</span><span class="w"> </span><span class="nn">datascience</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
+</section>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Link to this heading">#</a></h2>
+<p>Standard datascience initialization code with endplay added for bridge functionality follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datascience</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plots</span>
 <span class="n">plots</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">stats</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">endplay</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </pre></div>
-</div>
-</div>
 </div>
 </section>
 <div class="toctree-wrapper compound">
@@ -638,6 +637,7 @@ Original Blue Team players suggested that bridge is not a game of points. Instea
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intial-code-block">Intial Code Block</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code">Code</a></li>
 </ul>
   </nav></div>
 
