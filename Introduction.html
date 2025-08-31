@@ -523,7 +523,7 @@ Values per Contract</div>
 </section>
 <section id="natural-bidding-systems">
 <h3>Natural Bidding Systems<a class="headerlink" href="#natural-bidding-systems" title="Link to this heading">#</a></h3>
-<p>Relays, transfer bids, inverted minors, and Drury bids exemplify how unnatural bids in modern bridge can be. Artificial bids may result in misunderstandings, howevere. The more natural our bidding is, the more likely partner will know how to respond. Seeking accuracy for every eventuality results in a problem of memory – too much information to remember easily when playing.</p>
+<p>Relays, transfer bids, inverted minors, and Drury bids exemplify how unnatural bids in modern bridge can be. Artificial bids may result in misunderstandings. The more natural our bidding, the more likely partner will know how to respond. Seeking accuracy for every eventuality with artificial bids results in a problem of memory – too much information to remember easily when playing.</p>
 <p>Many bridge hands are thorny and do provide challenges to natural bidding. Hence, we need <strong>some</strong> conventions. In this system we will use the following conventions:</p>
 <ul class="simple">
 <li><p>Stayman</p></li>
@@ -531,8 +531,7 @@ Values per Contract</div>
 <li><p><a class="reference external" href="https://www.bridgebum.com/kantar_cue_bid.php">Cue Bids</a></p></li>
 <li><p><a class="reference external" href="https://www.bridgebum.com/roman_key_card_blackwood.php">Roman Key Card Blackwood</a> (1430)</p></li>
 </ul>
-<p>Note that Stayman in Blue Club may need a slightly different treament due to the fact we can open 4-card majors. Alex Knox has a good treament: <a class="reference external" href="https://acblunit390.org/improve-your-game/blue-club-calgary-casual/">Blue Club Calgary, pp. 49-50</a>.</p>
-<p>The rest of Blue Club Dahlonega remains as natural as possible. In this way, the partnership avoids tricking itself into nonsense contracts. This system is the beginning for a partnership wishing to learn a strong 1<span class="math notranslate nohighlight">\(\clubsuit\)</span> system. As the partnership develops using Blue Club Dahlonega, additional conventions and agreements can be added.</p>
+<p>Note that Stayman in Blue Club may need a slightly different treament due to the fact we can open 4-card majors. Alex Knox has a good treament: <a class="reference external" href="https://acblunit390.org/improve-your-game/blue-club-calgary-casual/">Blue Club Calgary, pp. 49-50</a>. Blue Club Dahlonega remains as natural as possible so that the partnership avoids tricking itself into nonsense contracts.</p>
 </section>
 </section>
 <section id="hand-evaluation">
@@ -543,7 +542,7 @@ Values per Contract</div>
 <p>While some methods are quite sophisticated, Blue Club Dahlonega chooses simplicity instead. The cost in effectivenss is quite minimal.</p>
 <section id="distributional-points">
 <h3>Distributional Points<a class="headerlink" href="#distributional-points" title="Link to this heading">#</a></h3>
-<p>The DP for Blue Club Dahlonega will remain easy to count and focused on the most important features:</p>
+<p>The DP for Blue Club Dahlonega will remain easy to count but focused on key ideas:</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Distributional Points: DP</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -553,16 +552,53 @@ Values per Contract</div>
 <li><p class="sd-card-text">Add 1 DP for a singleton.</p></li>
 </ul>
 </div>
-</details><p>Do some players use more complicated ways to evaluate the power of a hand? Of course. For example, some add a point for doubltons and increase the points added for singletons and voids. Is this needed? Not if a new partnership wishes to learn Blue Club Dahlonega.</p>
-</section>
+</details></section>
 <section id="strength-of-holdings">
 <h3>Strength of Holdings<a class="headerlink" href="#strength-of-holdings" title="Link to this heading">#</a></h3>
 <p>To further evaluate the distributional properties of a hand, Blue Club Dahlonega includes three additional bridge ideas used widely by modern players and other systems:</p>
-<ol class="arabic simple">
-<li><p><strong>Rule of 20.</strong> The Rule of 20 says that, provided our HCP plus the number of cards in our 2 longest suits is at least 20, we can confidently open with 1<span class="math notranslate nohighlight">\(\clubsuit\)</span>, 1<span class="math notranslate nohighlight">\(\heartsuit\)</span> or 1<span class="math notranslate nohighlight">\(\spadesuit\)</span>. The Rule of 20 allows us to open some hands with only 11 HCP. The Rule of 20 helps us understand whether a bridge hand is strong enough be opened by standard level-one bid.</p></li>
-<li><p><strong>Controls.</strong> Control of suit indicates a singleton, a void suit, or a suit holding like Kx. First round control means we have the first winner in the suit, something like a void or a singleton Ace. Second round control indicates we have the second winner in the suit such as Kx or a small singleton. We already count short suits in our DP, and we further consider controls when fit or superfit has been found, generally when <span style = "color:blue;font-weight:bold">searching for a slam</span>.</p></li>
-<li><p><strong>Bad Shape.</strong> The worst hands in bridge have a 4-3-3-3 distribution. A 4-3-3-3 hand plays worse than its HCP would indicate. We will discount by one HCP all hands with a 4-3-3-3 shape.</p></li>
-</ol>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Rule of 20</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Provided the HCP of the hand plus the number of cards in our 2 longest suits is at least 20, we can confidently open with 1<span class="math notranslate nohighlight">\(\clubsuit\)</span>, 1<span class="math notranslate nohighlight">\(\heartsuit\)</span> or 1<span class="math notranslate nohighlight">\(\spadesuit\)</span>. The Rule of 20 helps determine when a bridge hand is strong enough be opened by standard level-one suit bid.</p>
+</div>
+</details></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Controls</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Control of suit indicates a singleton, a void suit, or a suit holding like Kx. First round control indicates we have the first winner in the suit: a void or singleton Ace. Second round control indicates we have the second winner in the suit such as Kx or a small singleton.</p>
+</div>
+</details></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Bad Shape</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The worst hands in bridge have a 4333 distribution. They play worse than the HCP would indicate. We will discount by one HCP all hands with a 4-3-3-3 shape and refuse to open them unless they pass the Rule of 20.</p>
+</div>
+</details></div>
+</div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="intial-code-block">
