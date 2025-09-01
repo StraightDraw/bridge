@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Introduction';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bidding Strategy" href="Strategy_Bidding.html" />
+    <link rel="next" title="Hand Evaluation" href="HandEval.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,6 +184,7 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">The Blue Club Advantage</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="HandEval.html">Hand Evaluation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Strategy_Bidding.html">Bidding Strategy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Strategy_Handling_Aggression.html">Strategy: Handling Aggression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OpeningBids.html">Opening Bids</a></li>
@@ -461,10 +462,9 @@ document.write(`
 </section>
 <section id="opponents-and-interference">
 <h3>Opponents and Interference<a class="headerlink" href="#opponents-and-interference" title="Link to this heading">#</a></h3>
-<p>The bridge world recognized the power of the Italians’ strong club bidding and reacted with countermeasures. Primarily, <span style = 'color:red;font-weight:bold'>a strong club system is hampered by overcalls and competitive bidding</span>. An overcall of the <span class="math notranslate nohighlight">\(1\clubsuit\)</span> opening bid uses up bidding space that the strong club system intends to use to place the correct contract. Weak 2 and Weak 3 overcalls abound, and often the opponents will overcall with almost nothing just to interfere.</p>
-<p>A strong club system deployed today requires an understanding of competetive bidding and how to navigate it. We still wish to give partner a specific point-range for our hands, and we hope to give some description of the distributional qualities of our hands. Opponents will refuse to sit quietly and watch that happen.</p>
-<p>All bridge players use conventions: artificial bidding sequences that transmit information in non-intuitive ways. Coventions are great tools if they are simple to use and easy to remember. A complex web of artificial bidding sequences can confound our parters rather than enlightening them. Any bridge system becomes difficult to use when numerous agreements must be negotiated, memorized, and recalled <strong>perfectly</strong> at the table. Some descendants of Blue Club have become highly technical and quite artificial in response to the hyper-aggressive competitive bidding deployed against it. Yet, we must be careful as bidding systems are only useful when they are truly understood by both partners.</p>
-<p>A goal of Blue Club Dahlonega is to accept the competetive bidding challege with grace yet develop ways through the chaos that allow the bidding to be as natural and intuitive as possible.</p>
+<p>The bridge world recognized the power of the Italians’ strong club bidding and reacted with countermeasures. An overcall of the <span class="math notranslate nohighlight">\(1\clubsuit\)</span> opening bid uses up bidding space needed to place the perfect contract. Weak 2 and Weak 3 overcalls abound with some opponents overcalling with almost nothing.</p>
+<p>How does Blue Club Dahlonega navigate competetive bidding? Our bids still specificy a limitted point-range for our hands, and we need to describe the distributional qualities of our hands. Opponents will refuse to sit quietly and watch that happen. Some descendants of Blue Club have become quite artificial in response to the aggressive competitive bidding deployed by the opposition.</p>
+<p>Blue Club Dahlonega accepts the competetive bidding challege with grace yet develops ways through the chaos that allow the bidding to be as natural and informative to partner as possible.</p>
 </section>
 </section>
 <section id="traditional-bidding">
@@ -603,18 +603,18 @@ Bad Shape</div>
 </section>
 <section id="intial-code-block">
 <h2>Intial Code Block<a class="headerlink" href="#intial-code-block" title="Link to this heading">#</a></h2>
-<p>Let’s highlight the packages that we will require:</p>
+<p>To code Blue Club in Python, we will need several packages:</p>
 <ol class="arabic simple">
 <li><p>endplay (bridge and card evaluation functions)</p></li>
 <li><p>datascience (tables, etc.)</p></li>
 <li><p>numpy</p></li>
 <li><p>scipy.stats (evaluation of information from tables)</p></li>
 </ol>
-<p>You can see the initial code block we will need detailed below. Notice that we load matplotlib and use the style created by the folks at 538.</p>
+<p>The standard initial code block for coding bridge in Python is shown below. Notice that we load matplotlib and use the style created by the folks at 538.</p>
 </section>
 <section id="code">
 <h2>Code<a class="headerlink" href="#code" title="Link to this heading">#</a></h2>
-<p>Standard datascience initialization code with endplay added for bridge functionality follows:</p>
+<p>Standard datascience initialization code with the <span style='color:red;font-weight:bold'>endplay</span> package added for bridge functionality follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">datascience</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plots</span>
@@ -666,11 +666,11 @@ Bad Shape</div>
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="Strategy_Bidding.html"
+       href="HandEval.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bidding Strategy</p>
+        <p class="prev-next-title">Hand Evaluation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
