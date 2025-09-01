@@ -21,6 +21,6 @@ parts:
     - file: DuplicateScoring
   - caption: Python Code
     chapters:
-    - file: bc_functions
+    - file: bc_eval
     - file: bc_bids
     - file: bc_sandbox

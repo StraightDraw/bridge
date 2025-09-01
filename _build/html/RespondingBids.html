@@ -183,6 +183,7 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">The Blue Club Advantage</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="HandEval.html">Hand Evaluation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Strategy_Bidding.html">Bidding Strategy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Strategy_Handling_Aggression.html">Strategy: Handling Aggression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OpeningBids.html">Opening Bids</a></li>
@@ -200,7 +201,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Code</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="bc_functions.html">Blue Club Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bc_eval.html">Blue Club Hand Evaluation Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bc_bids.html">Blue Club Bidding Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bc_sandbox.html">Sandbox</a></li>
 </ul>
@@ -416,12 +417,11 @@ document.write(`
 <h1>Responding Bids<a class="headerlink" href="#responding-bids" title="Link to this heading">#</a></h1>
 <p>Blue Club Dahlonega embraces the limiting nature of nearly every opening bid. Responder has only limit bids to offer with 2/1 bids game forcing as in most modern systems. A quick overview of responses shows the outline of the limit bids:</p>
 <ul class="simple">
-<li><p>Lowest level: 7-11 HCP.</p></li>
-<li><p>Raise: 12-16 HCP (standard 2/1 bid).</p></li>
-<li><p>Jump raise: 17-21 HCP</p></li>
-<li><p>Double-jump raise: Splinter</p></li>
+<li><p><strong>Lowest level</strong>: 7-11 points.</p></li>
+<li><p><strong>Raise</strong>: 12-16 points (standard 2/1 bid).</p></li>
+<li><p><strong>Jump raise</strong>: Splinter, 17+ points.</p></li>
 </ul>
-<p>The “2 over 1” promises standard opening values as is typical in modern bridge systems. A jump raise indicates a monster hand 17 - 21 HCP. A triple jump raise is a splinter bid indicating 4-card support or better for partner’s suit and control of the suit bid. A splinter bid is forcing to game and indicates at least 12 points.</p>
+<p>The “2 over 1” promises standard opening values as is typical in modern bridge systems. A jump raise indicates a huge hand with 17+ points. A triple jump raise is a splinter bid indicating 4-card support or better for partner’s suit and control of the suit bid. A splinter bid is forcing to game and indicates at least 12 points.</p>
 <section id="responding-to-an-opening-bid-of-1-diamondsuit-1-heartsuit-or-1-spadesuit">
 <h2>Responding to an Opening Bid of 1<span class="math notranslate nohighlight">\(\diamondsuit\)</span>, 1<span class="math notranslate nohighlight">\(\heartsuit\)</span> or 1<span class="math notranslate nohighlight">\(\spadesuit\)</span><a class="headerlink" href="#responding-to-an-opening-bid-of-1-diamondsuit-1-heartsuit-or-1-spadesuit" title="Link to this heading">#</a></h2>
 <table style="width:90%">
@@ -457,13 +457,13 @@ document.write(`
   </tr>
   <tr>
     <td style="text-align: center; vertical-align: middle;">3$\clubsuit$ 3$\diamondsuit$ </br> 3$\heartsuit$ 3$\spadesuit$</td>
-    <td style="text-align: center; vertical-align: middle;">17 - 21</td>
-    <td>Splinter bid, game forcing and likely slam seaking. At least 4 card support for partner's suit with 1st round control of suit bid.</td>
+    <td style="text-align: center; vertical-align: middle;">17+</td>
+    <td>Splinter bid: game forcing and slam seaking. At least 4 card support for partner's suit with 1st round control of suit bid.</td>
   </tr>
   <tr>
     <td style="text-align: center; vertical-align: middle;">3NT</td>
-    <td style="text-align: center; vertical-align: middle;">17 - 21</td>
-    <td>Balanced, poor support for partner's suit.</td>
+    <td style="text-align: center; vertical-align: middle;">17+</td>
+    <td>Artificial, big hand, awaiting developments.</td>
   </tr>
 </table></section>
 <section id="responding-to-an-opening-bid-of-1-clubsuit">
