@@ -6,6 +6,7 @@ root: Introduction
 parts:
   - caption: The Blue Club Advantage
     chapters:
+    - file: HandEval
     - file: Strategy_Bidding
     - file: Strategy_Handling_Aggression
     - file: OpeningBids
